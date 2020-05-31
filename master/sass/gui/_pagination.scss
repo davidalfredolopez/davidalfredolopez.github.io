@@ -1,0 +1,26 @@
+/* Pagination */
+.pagination {
+	.page-item + .page-item {
+		margin-left: 5px;
+		&.active {
+			.page-link {
+				background: $color-skin-default;
+				color: $color-light !important;
+			}
+		}
+	}
+	.page-link {
+		color: $color-font-default;
+		background: transparent;
+		font-weight: bold;
+		&.next,
+		&.prev {
+			border: none;
+		}
+
+		&:hover:not(.next):not(.prev) {
+			color: $color-skin-default;
+			border: 1px solid $color-skin-default;
+		}
+	}
+}

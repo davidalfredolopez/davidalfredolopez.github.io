@@ -1,0 +1,390 @@
+/* Icon Box */
+.icon-box {
+
+	h1, h2, h3, h4 {
+		font-weight: 700;
+		margin-bottom: 0.6rem;
+	}
+
+	.icon-box-sub-title {
+		font-family: $font-primary;
+		font-size: 0.9em;
+	}
+
+	.icon-box-icon {
+		i.fa,
+		i.fas,
+		i.far,
+		i.fal,
+		i.fab,
+		i.icons,
+		i.lnr {
+			position: relative;
+		}
+
+		object,
+		img {
+			position: relative;
+		}
+
+		object,
+		img {
+			&:not([width]) {
+				width: 42px;
+			}
+		}
+
+		i {
+			font-size: 2.5rem;
+		}
+
+		&.icon-box-icon-no-top {
+			i,
+			.animated-icon {
+				top: 0 !important; 
+			}
+		}
+
+		.stick-icon {
+			margin-left: -26px;
+		}
+	}
+
+	.icon-box-icon-offset-border {
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 100%;
+		padding: 4px;
+		.icon-box-icon {
+			margin: 0 !important;
+		}
+	}
+
+	.icon-box-icon-square {
+		border-radius: 4px !important;
+	}
+
+	&.icon-box-style-1 {
+		display: -ms-flexbox;
+		display: flex;
+
+		.icon-box-icon {
+			padding-right: 1rem;
+			i.fa,
+			i.fas,
+			i.far,
+			i.fal,
+			i.fab,
+			i.icons,
+			i.lnr {
+				font-size: 2.3rem;
+				top: 8px;
+			}
+		}
+
+		.animated-icon {
+			top: 8px;
+		}
+
+		h1, h2, h3, h4 {
+			margin-bottom: 1rem;
+		}
+
+		.icon-box-info {
+			p {
+				font-size: 0.9rem;
+			}
+		}
+
+		&.icon-box-reverse {
+			.icon-box-icon {
+				padding-right: 0;
+				padding-left: 1rem;
+			}
+		}
+
+		&.align-items-center {
+			.icon-box-icon {
+				i.fa,
+				i.fas,
+				i.far,
+				i.fal,
+				i.fab,
+				i.icons,
+				i.lnr {
+					top: 0;
+				}
+			}
+		}
+	}
+
+	&.icon-box-style-2 {
+
+		.icon-box-icon {
+			display: inline-block;
+			float: $left;
+			padding-right: 0.8rem;
+			i.fa,
+			i.fas,
+			i.far,
+			i.fal,
+			i.fab,
+			i.icons,
+			i.lnr {
+				font-size: 2rem;
+				top: -3px;
+			}
+		}
+
+		h1, h2, h3, h4 {
+			margin-bottom: 1rem;
+		}
+
+		.icon-box-info-title {
+			display: inline-block;
+		}
+
+		&.icon-box-reverse {
+			.icon-box-icon {
+				padding-right: 0;
+				float: $right;
+				padding-left: 0.8rem;
+			}
+		}
+	}
+
+	&.icon-box-style-3 {
+
+		.icon-box-icon {
+			padding-bottom: 0.5rem;
+			i.fa,
+			i.fas,
+			i.far,
+			i.fal,
+			i.fab,
+			i.icons,
+			i.lnr {
+				font-size: 2.8rem;
+				position: relative;
+			}
+		}
+
+		h1, h2, h3, h4 {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&.icon-box-style-4,
+	&.icon-box-style-7 {
+		display: -ms-flexbox;
+		display: flex;
+		align-items: flex-start;
+
+		.icon-box-icon-offset-border {
+			margin-right: 1rem;
+		}
+
+		.icon-box-icon {
+			margin-right: 1rem;
+			border-radius: 100%;
+			width: auto;
+			height: auto;
+			padding: 2.3rem;
+			text-align: center;
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			position: relative;
+			i.fa,
+			i.fas,
+			i.far,
+			i.fal,
+			i.fab,
+			i.icons,
+			i.lnr {
+				font-size: 1.9rem;
+				color: #FFF;
+				margin: 0 auto;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			object,
+			img {
+				margin: 0 auto;
+			}
+		}
+
+		&.icon-box-reverse {
+			.icon-box-icon {
+				margin-right: 0;
+				margin-left: 1rem;
+			}
+		}
+	}
+
+	&.icon-box-style-5,
+	&.icon-box-style-8 {
+		text-align: center;
+
+		.icon-box-icon-offset-border {
+			margin: 0 auto 1.5rem;
+			width: 109px;
+			height: 109px;
+			padding: 4px;
+		}
+
+		.icon-box-icon {
+			margin: 0 auto 1.5rem;
+			border-radius: 100%;
+			width: 100px;
+			height: 100px;
+			text-align: center;
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			i.fa,
+			i.fas,
+			i.far,
+			i.fal,
+			i.fab,
+			i.icons,
+			i.lnr {
+				font-size: 2.9rem;
+				color: #FFF;
+				margin: 0 auto;
+			}
+
+			object,
+			img {
+				margin: 0 auto;
+			}
+		}
+
+	}
+
+	&.icon-box-style-6 {
+		text-align: center;
+		.icon-box-icon {
+			margin: 0 auto 1.5rem;
+			text-align: center;
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			i.fa,
+			i.fas,
+			i.far,
+			i.fal,
+			i.fab,
+			i.icons,
+			i.lnr {
+				font-size: 2.8rem;
+				margin: 0 auto;
+			}
+
+			object,
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+
+	&.icon-box-style-7 {
+		.icon-box-icon {
+			border: 1px solid rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	&.icon-box-style-8 {
+		.icon-box-icon {
+			border: 1px solid rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	&.icon-box-reverse {
+		text-align: $right;
+	    justify-content: flex-end;
+		.icon-box-icon {
+			order: 2;
+		}
+		.icon-box-info {
+			order: 1;
+		}
+	}
+
+	&.icon-box-pull-top {
+		margin-top: -3rem;
+	}
+
+}
+
+/* Icon Box Animations */
+.icon-box-animation-1 {
+	position: relative;
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 0;
+		top: 0;
+		left: 0;
+		border-bottom: 3px solid $color-skin-default;
+		transition: cubic-bezier(.55,0,.1,1) width 400ms;
+	}
+	&:after {
+		top: auto;
+		left: auto;
+		right: 0;
+		bottom: 0;
+	}
+	
+	.icon-box {
+		padding: 3rem;
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			height: 0;
+			top: 0;
+			left: 0;
+			border-right: 3px solid $color-skin-default;
+			transition: cubic-bezier(.55,0,.1,1) height 400ms;
+		}
+		&:after {
+			top: auto;
+			left: auto;
+			right: 0;
+			bottom: 0;
+		}
+	}
+
+	&:hover {
+		&:before,
+		&:after {
+			width: 100%;
+		}
+
+		.icon-box {
+			&:before,
+			&:after {
+				height: 100%;
+			}
+		}
+	}
+
+	/* Icon Box Animation 1 - Light */
+	&.icon-box-animation-1-light {
+		&:before,
+		&:after {
+			border-color: $color-light;
+		}
+
+		.icon-box {
+			&:before,
+			&:after {
+				border-color: $color-light;
+			}
+		}
+	}
+}

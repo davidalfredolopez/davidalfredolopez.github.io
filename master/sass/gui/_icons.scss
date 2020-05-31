@@ -1,0 +1,60 @@
+/* Icons */
+[data-icon],
+.animated-icon {
+	position: relative;
+	opacity: 0;
+}
+
+.sample-icon {
+	line-height: 40px;
+	font-size: 11px;
+
+	.fa, .fas, .far, .fal, .fab, .sl, .lnr {
+		display: inline-block;
+		font-size: 14px;
+		margin-right: 10px;
+		text-align: center;
+		width: 32px;
+		color: $color-dark;
+		position: relative;
+		transition: all 0.3s;
+		top: 1px;
+	}
+
+	&:hover {
+		.fa, .fas, .far, .fal, .fab, .sl, .lnr {
+			font-size: 28px;
+			top: 5px;
+		}
+	}
+
+	.sl {
+		font-size: 18px;
+		top: 4px;
+	}
+
+	&:hover {
+		.sl {
+			font-size: 24px;
+		}
+	}
+
+	&.sample-icon-sl {
+		line-height: 50px;
+	}
+
+	.lnr {
+		font-size: 18px;
+		top: 4px;
+	}
+
+	&:hover {
+		.lnr {
+			font-size: 24px;
+		}
+	}
+
+	&.sample-icon-lnr {
+		line-height: 50px;
+	}
+}

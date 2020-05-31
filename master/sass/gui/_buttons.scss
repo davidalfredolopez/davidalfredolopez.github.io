@@ -1,0 +1,354 @@
+/* Buttons */
+.btn {
+	display: inline-flex;
+	font-size: 0.75rem;
+	font-family: $font-primary;
+	cursor: pointer;
+	transition: all 0.1s;
+}
+
+/* Buttons Sizes */
+.btn-fs-1 {
+	font-size: 0.6rem !important;
+}
+
+.btn-fs-2 {
+	font-size: 0.7rem !important;
+}
+
+.btn-fs-3 {
+	font-size: 0.8rem !important;
+}
+
+.btn-fs-4 {
+	font-size: 0.9rem !important;
+}
+
+.btn-fs-5 {
+	font-size: 1rem !important;
+}
+
+/* Sizes */
+.btn-1 {
+	padding: 0.0769230769rem 1.0769230769rem !important;
+}
+.btn-2 {
+	padding: 0.3076923077rem 1.4615384615rem !important;
+}
+.btn-3 {
+	padding: 0.4615384615rem 1.8461538462rem !important;
+}
+.btn-4 {
+	padding: 0.6923076923rem 2.2307692308rem !important;
+}
+.btn-5 {
+    padding: 0.9230769231rem 2.6153846154rem !important;
+}
+
+/* Vertical Sizes */
+.btn-v-1 {
+	padding-top: 0.1538461538rem !important;
+	padding-bottom: 0.1538461538rem !important;
+}
+.btn-v-2 {
+	padding-top: 0.4615384615rem !important;
+	padding-bottom: 0.4615384615rem !important;
+}
+.btn-v-3 {
+	padding-top: 0.6923076923rem !important;
+	padding-bottom: 0.6923076923rem !important;
+}
+.btn-v-4 {
+	padding-top: 0.9230769231rem !important;
+	padding-bottom: 0.9230769231rem !important;
+}
+.btn-v-5 {
+	padding-top: 1.1538461538rem !important;
+	padding-bottom: 1.1538461538rem !important;
+}
+
+/* Horizontal Sizes */
+.btn-h-1 {
+	padding-left: 1.0769230769rem !important;
+	padding-right: 1.0769230769rem !important;
+}
+.btn-h-2 {
+	padding-left: 1.8461538462rem !important;
+	padding-right: 1.8461538462rem !important;
+}
+.btn-h-3 {
+	padding-left: 2.6153846154rem !important;
+	padding-right: 2.6153846154rem !important;
+}
+.btn-h-4 {
+	padding-left: 3.3846153846rem !important;
+	padding-right: 3.3846153846rem !important;
+}
+.btn-h-5 {
+	padding-left: 4.1538461538rem !important;
+	padding-right: 4.1538461538rem !important;
+}
+
+/* Wide Buttons */
+.btn-wide-1 {
+	padding: 0.9230769231rem 2.2307692308rem !important;
+}
+.btn-wide-2 {
+	padding: 0.9230769231rem 3rem !important;
+}
+.btn-wide-3 {
+	padding: 0.9230769231rem 3.7692307692rem !important;
+}
+.btn-wide-4 {
+	padding: 0.9230769231rem 4.5384615385rem !important;
+}
+.btn-wide-5 {
+    padding: 0.9230769231rem 6.0769230769rem !important;
+}
+
+/* Button Block */
+.btn-block {
+	display: block;
+}
+
+/* Border Buttons */
+.btn-rounded {
+	border-radius: 50px;
+}
+
+/* Outline Buttons */
+.btn-outline {
+	border-width: 2px;
+	border-radius: 50px;
+}
+
+/* Button With Icon Effect 1 */
+.btn-icon-effect-1 {
+	.wrap {
+		position: relative;
+		span {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			left: 0;
+			transition: ease left 300ms;
+		}
+		i, strong {
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			opacity: 0;
+			font-size: 1.1rem;
+			max-width: 20px;
+			transform: translate3d(0, -50%, 0);
+			transition: ease right 300ms, ease opacity 300ms;
+		}
+	}
+	&:hover {
+		.wrap {
+			span {
+				left: -14px;
+			}
+			i, strong {
+				opacity: 1;
+				right: -14px;
+			}
+		}
+	}
+}
+
+/* Button With Icon Effect 2 */
+.btn-icon-effect-2 {
+	position: relative;
+	overflow: hidden;
+	span {
+		display: inline-block;
+		transition: ease transform 300ms, ease opacity 300ms;
+	}
+	i {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		opacity: 0;
+		font-size: 1.5em;
+		transform: translate(-50%, -100%);
+		transition: ease transform 300ms, ease opacity 300ms;
+	}
+	&:hover {
+		span {
+			opacity: 0;
+			transform: translateY(-100%);
+		}
+		i {
+			opacity: 1;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+/* Button Group */
+.btn-group {
+	> .btn-group:not(:first-child) > .btn,
+	> .btn:not(:first-child) {
+		> strong {
+			position: relative;
+			left: -3px;
+		}
+	}
+
+	&.btn-group-style-1 {
+		> {
+			.btn:first-child {
+				z-index: 10;
+				margin-right: -3.5em;
+			}
+			.btn-outline:last-child {
+				padding-left: 5.5em !important;
+			}
+			.btn-rounded, .btn-outline {
+	    		position: relative;
+	    		border-radius: 50px !important;
+	    	}
+	    }
+	    &:hover {
+			> {
+				.btn:first-child {
+					box-shadow: 2px 0px 1px rgba(0, 0, 0, 0.1);
+				}
+			}
+	    }
+	}
+
+	&.btn-group-style-2 {
+		> {
+			.btn:first-child {
+				border-top-#{$right}-radius: 0;
+				border-bottom-#{$right}-radius: 0;
+			}
+	    }
+	}
+}
+
+/* Buttons Colors */
+.btn-light,
+html.sticky-header-active .btn-sticky-light {
+	border-color: $color-light;
+	color: $color-light-inverse;
+	background-color: $color-light;
+	&:hover, &:focus {
+		border-color: lighten($color-light, 10%);
+		background-color: lighten($color-light, 10%);
+		color: $color-light-inverse;
+	}
+	&:focus {
+		box-shadow: 0 0 0 3px rgba($color-light, 0.25);
+	}
+	&:disabled, &.disabled {
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			cursor: default;
+			border-color: $color-light !important;
+			color: $color-light-inverse !important;
+			background-color: $color-light !important;
+		}
+	}
+
+	// Outline
+	&.btn-outline {
+		background: transparent;
+		border-color: $color-light;
+		color: $color-light;
+		&:hover, &:focus {
+			border-color: lighten($color-light, 10%);
+			background-color: $color-light;
+			color: $color-light-inverse;
+		}
+		&:focus {
+			box-shadow: 0 0 0 3px fade($color-light, 25%);
+		}
+		&:disabled, &.disabled {
+			&,
+			&:hover,
+			&:active,
+			&:focus {
+				background: transparent !important;
+				border-color: $color-light !important;
+				color: $color-light !important;
+			}
+		}
+	}
+}
+
+.btn-dark,
+html.sticky-header-active .btn-sticky-dark {
+	border-color: $color-dark;
+	color: $color-dark-inverse;
+	background-color: $color-dark;
+	&:hover, &:focus {
+		border-color: lighten($color-dark, 10%);
+		background-color: lighten($color-dark, 10%);
+		color: $color-dark-inverse;
+	}
+	&:focus {
+		box-shadow: 0 0 0 3px rgba($color-dark, 0.25);
+	}
+	&:disabled, &.disabled {
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			cursor: default;
+			border-color: $color-dark !important;
+			color: $color-dark-inverse !important;
+			background-color: $color-dark !important;
+		}
+	}
+
+	// Outline
+	&.btn-outline {
+		background: transparent;
+		border-color: $color-dark;
+		color: $color-dark;
+		&:hover, &:focus {
+			border-color: darken($color-dark, 10%);
+			background-color: $color-dark;
+			color: $color-dark-inverse;
+		}
+		&:focus {
+			box-shadow: 0 0 0 3px fade($color-dark, 25%);
+		}
+		&:disabled, &.disabled {
+			&,
+			&:hover,
+			&:active,
+			&:focus {
+				background: transparent !important;
+				border-color: $color-dark !important;
+				color: $color-dark !important;
+			}
+		}
+	}
+}
+
+/* Button Dots */
+.btn-dots {
+    font-size: 2.5rem;
+    line-height: 0.2;
+    padding-top: 0;
+    padding-bottom: 1.2rem;
+}
+
+/* Colorpicker Button */
+.colorpicker-button-style-1 {
+	padding: 0.7rem 2rem 0.7rem 3rem;
+    margin-left: -1.4rem;
+}
+
+/* Btn Pull Down */
+.btn-pull-down {
+	position: relative;
+	top: 20px;
+}

@@ -1,0 +1,45 @@
+/* Dividers */
+hr {
+	
+	/* Divider Width */
+	&.divider-w-1 {
+		width: 50px;	
+	}
+	&.divider-w-2 {
+		width: 100px;	
+	}
+	&.divider-w-3 {
+		width: 150px;	
+	}
+	&.divider-w-4 {
+		width: 200px;	
+	}
+	&.divider-w-5 {
+		width: 250px;	
+	}
+
+	/* Divider Size */
+	&.divider-size-1 {
+		border-width: 1px;
+	}
+	&.divider-size-2 {
+		border-width: 2px;
+	}
+	&.divider-size-3 {
+		border-width: 4px;
+	}
+	&.divider-size-4 {
+		border-width: 6px;
+	}
+	&.divider-size-5 {
+		border-width: 8px;
+	}
+
+}
+
+/* Custom Dividers */
+.custom-divider-1 {
+	background: #ccc;
+	width: 30px;
+	height: 1px;
+}

@@ -1,0 +1,58 @@
+/* Sort */
+.sort-source {
+	> div,
+	> li {
+		> a {
+			font-size: 0.75rem;
+			font-family: $font-primary;
+			font-weight: 500;
+		}
+		&.active {
+			> a {
+				font-weight: 700;
+			}	
+		}
+		&:first-child {
+			> a {
+				padding-#{$left}: 0;
+			}
+		}
+	}
+}
+
+/* Sort Loading */
+.sort-destination-loader {
+	height: auto;
+	overflow: hidden;
+	position: relative;
+	&:after {
+		content: ' ';
+		background: $color-light;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+	.bounce-loader {
+		display: none;
+	}
+	&.sort-destination-loader-showing {
+		max-height: 200px;
+		&:after {
+			opacity: 1;
+		}
+		.bounce-loader {
+			display: block;
+		}
+	}
+	&.sort-destination-loader-loaded {
+		overflow: visible;
+		&:after {
+			display: none;
+		}
+	}
+}

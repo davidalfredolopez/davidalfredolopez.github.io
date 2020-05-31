@@ -1,0 +1,252 @@
+/* Social Icons */
+.social-icons {
+	margin: 0;
+	padding: 0;
+	width: auto;
+	li {
+		display: inline-block;
+		margin: side-values(-1px 1px 0 2px);
+		padding: 0;
+		border-radius: 100%;
+		overflow: visible;
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+		a {
+			transition: all 0.2s ease;
+			background: #FFF;
+			border-radius: 100%;
+			display: block;
+			height: 2.4em;
+			font-size: 1.1em;
+		    line-height: 2.4em;
+		    width: 2.4em;
+			text-align: center;
+			color: #999;
+			text-decoration: none;
+		}
+		&:hover {
+			a {
+				background: #171717;
+				color: #FFF !important;
+			}
+			&.social-icons-twitter {
+				a {
+					background: #1aa9e1 !important;
+				}
+			}
+			&.social-icons-facebook {
+				a {
+					background: #3b5a9a !important;
+				}
+			}
+			&.social-icons-linkedin {
+				a {
+					background: #0073b2 !important;
+				}
+			}
+			&.social-icons-rss {
+				a {
+					background: #ff8201 !important;
+				}
+			}
+			&.social-icons-googleplus {
+				a {
+					background: #dd4b39 !important;
+				}
+			}
+			&.social-icons-pinterest {
+				a {
+					background: #cc2127 !important;
+				}
+			}
+			&.social-icons-youtube {
+				a {
+					background: #c3191e !important;
+				}
+			}
+			&.social-icons-instagram {
+				a {
+					background: #7c4a3a !important;
+				}
+			}
+			&.social-icons-skype {
+				a {
+					background: #00b0f6 !important;
+				}
+			}
+			&.social-icons-email {
+				a {
+					background: #dd4b39 !important;
+				}
+			}
+			&.social-icons-vk {
+				a {
+					background: #6383a8 !important;
+				}
+			}
+			&.social-icons-xing {
+				a {
+					background: #1a7576 !important;
+				}
+			}
+			&.social-icons-tumblr {
+				a {
+					background: #304e6c !important;
+				}
+			}
+			&.social-icons-reddit {
+				a {
+					background: #ff4107 !important;
+				}
+			}
+			&.social-icons-dribbble {
+				a {
+					background: #ea4c89 !important;
+				}
+			}
+		}
+	}
+	&.header-top-social-icons {
+		li {
+			&:hover {
+				a {
+					color: $color-light;
+				}
+			}
+		}
+	}
+	&.header-social-icons {
+		li {
+			a {
+				width: 2.6em;
+				height: 2.6em;
+				font-size: 0.9em;
+				line-height: 2.6em;
+				color: $color-dark;
+			}
+			&:hover {
+				a {
+					color: $color-light;
+				}
+			}
+		}
+	}
+	&.social-icons-border {
+		li {
+			a {
+				background: transparent;
+    			border: 2px solid $color-light;
+    			box-sizing: content-box;
+			}
+		}
+	}
+	&.social-icons-transparent {
+		li {
+			box-shadow: none;
+			a {
+				background: transparent;
+			}
+		}
+	}
+	&.social-icons-dark {
+		li {
+			a {
+				color: $color-light;
+				background: $color-dark-5;
+			}
+		}
+	}
+	&.social-icons-light {
+		li {
+			a {
+				color: $color-dark-5;
+				background: $color-light-5;
+			}
+		}
+	}
+	&.social-icons-icon-light {
+		li {
+			a {
+				color: $color-light;
+			}
+		}
+	}
+	&.social-icons-icon-dark {
+		li {
+			a {
+				color: $color-dark;
+			}
+			&:hover {
+				a {
+					color: $color-light !important;
+				}
+			}
+		}
+	}
+	&.social-icons-pills {
+		li {
+			a {
+				color: $color-light;
+				background-color: $color-skin-default;
+				border-radius: 0;
+			}
+		}
+	}
+	&.social-icons-1 {
+		li {
+			a {
+				font-size: 0.7rem;
+			}
+		}
+	}
+	&.social-icons-2 {
+		li {
+			a {
+				font-size: 0.8rem;
+			}
+		}
+	}
+	&.social-icons-3 {
+		li {
+			a {
+				font-size: 1rem;
+			}
+		}
+	}
+	&.social-icons-4 {
+		li {
+			a {
+				font-size: 1.2rem;
+			}
+		}
+	}
+	&.social-icons-5 {
+		li {
+			a {
+				font-size: 1.5em;
+			}
+		}
+	}
+}
+
+html.sticky-header-active {
+	#header {
+		&.header-transparent {
+			.header-social-icons {
+				li {
+					a {
+						i {
+							color: $color-dark;
+						}
+					}
+					&:hover {
+						a {
+							i {
+								color: $color-light;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+/* Dropdowns */
+.dropdown-menu {
+	font-size: inherit;
+	padding: 5px;
+	border: 0;
+	box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+	background: #252A2C;
+	text-align: $left;
+	> li {
+		border-bottom: 1px solid #303537;
+		> a {
+		    display: block;
+			padding: 7px;
+		    line-height: 1.42857143;
+		}
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+	li {
+		a:not(.btn) {
+			color: #9D9D9D;
+		}
+		&:hover {
+			a:not(.btn) {
+				color: $color-light;
+			}
+		}
+	}
+}
+
+.dropdown-toggle {
+	&:after {
+		content: none;
+	}
+}

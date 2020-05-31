@@ -1,0 +1,54 @@
+/* Portfolio List */
+.portfolio-list {
+	list-style: none;
+	margin: -0.5rem;
+	padding: 0;
+	
+	.portfolio-item {
+		position: relative;
+	    margin: 0.5rem;
+
+	    &.portfolio-item-style-2 {
+	    	margin: 0.5rem 0.5rem 2rem;
+	    }
+	}
+
+	&.portfolio-list-no-gap {
+		.portfolio-item {
+			margin: 0;
+		}
+	}
+
+	&.portfolio-list-style-2 {
+		margin: -1rem;
+		.portfolio-item {
+			margin: 1rem;
+		}
+	}
+
+	&.portfolio-list-style-3 {
+		margin: -1.2rem -1rem;
+		.portfolio-item {
+			margin: 1.2rem 1rem;
+		}
+	}
+
+	&.portfolio-list-style-4 {
+		margin: -1.4rem;
+		.portfolio-item {
+			margin: 1.4rem;
+		}
+	}
+}
+
+/* Portfolio Load More Loader */
+.portfolio-load-more-loader {
+	display: none;
+	position: relative;
+	height: 45px;
+}
+
+/* Portfolio Load More Button */
+#portfolioLoadMore {
+	margin-top: 20px;
+}

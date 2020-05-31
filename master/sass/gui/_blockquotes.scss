@@ -1,0 +1,56 @@
+/* Blockquote */
+.blockquote {
+	
+	font-size: 1.25rem;
+
+	.blockquote-footer-style-1 {
+		&:before {
+			content: '';
+		}
+	}
+
+	&.blockquote-style-1 {
+
+		padding: 40px 0 0 50px;
+		position: relative;
+
+		&:before {
+			font-family: $font-tertiary !important;
+			display: block;
+			font-style: italic;
+			content: "\201C";
+			font-size: 80px;
+			position: absolute;
+			left: 0;
+		}
+
+		&.blockquote-dark {
+			&:before {
+				color: $color-dark;
+			}
+		}
+
+		&.blockquote-light {
+			&:before {
+				color: $color-light;
+			}
+		}
+
+	}
+
+	&.blockquote-style-2 {
+
+		border-left: 5px solid $color-font-default;
+		padding-left: 1.5rem;
+
+		&.blockquote-dark {
+			border-left-color: $color-dark;
+		}
+
+		&.blockquote-light {
+			border-left-color: $color-light;
+		}
+
+	}
+
+}

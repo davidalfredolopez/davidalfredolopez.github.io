@@ -1,0 +1,145 @@
+/* Pricing Tables */
+.pricing-table {
+
+	&.pricing-table-style-1 {
+		padding-left: 15px;
+		padding-right: 15px;
+
+		[class^='col'] {
+			border: 1px solid $border-color-default;
+			border-right-color: transparent;
+			&:last-child {
+				border-right-color: $border-color-default;
+			}
+		}
+	}
+
+	.plan {
+		text-align: center;
+	}
+
+	.plan-title {
+		border-bottom: 1px solid $border-color-default;		
+		padding: 1.6rem 0;
+		h3 {
+			text-transform: uppercase;
+			font-size: em(14);
+			margin: 0;
+			padding: 0;
+			color: lighten($color-font-default, 15%);
+		}
+		em {
+			font-family: $font-tertiary;
+			font-size: em(13);
+			color: lighten($color-font-default, 20%);
+			margin: 0;
+			padding: 0;
+			opacity: 0.6;
+		}
+	}
+
+	.plan-price {
+		padding: 2.5rem 0 1.2rem;
+		strong {
+			font-size: em(48);
+			color: $color-dark-base-color;
+			font-weight: $font-weight-extra-bold;
+			em {
+				font-size: 0.5em;
+				font-style: normal;
+			}
+		}
+		p {
+			font-family: $font-tertiary;
+			font-size: em(16);
+			color: lighten($color-font-default, 20%);
+			margin: 0;
+		}
+	}
+
+	.plan-detail {
+		padding: 0 0 2rem;
+		ul {
+			list-style: none;
+			margin: 0 0 1.5rem;
+			padding: 0;
+			li {
+				margin: 0;
+				padding: 0.5rem 0;
+			}
+		}
+	}
+
+	.plan {
+		&.plan-most-popular {
+			z-index: 1;
+			@media (min-width: 992px) {
+				margin-top: -0.8rem;
+			}
+			.plan-title {
+				h3, em {
+					color: #FFF;
+				}
+			}
+		}
+	}
+
+	&.pricing-table-style-2 {
+		table {
+			td, th {
+				border: 0;
+				border-right: 1px solid $border-color-default;
+				text-align: center;
+			}
+			td {
+				border-left: 1px solid $border-color-default;
+				&:first-child {
+					text-align: right;
+				}
+			}
+			tbody tr {
+				&:nth-of-type(2n+1) {
+					background: rgba(0, 0, 0, 0.02);
+				}
+			}
+			thead {
+				tr {
+					th {
+						vertical-align: top;
+						border-bottom: 1px solid $border-color-default;
+						border-top: 1px solid $border-color-default;
+						background: rgba(0, 0, 0, 0.02);
+						&:first-child {
+							border-top: 0;
+							background: transparent;
+						}
+					}
+				}
+			}
+			tr:last-child {
+				background: transparent !important;
+				td {
+					border-top: 1px solid $border-color-default;
+					border-left: 0;
+					&.plan-action {
+						border-bottom: 1px solid $border-color-default;
+					}
+				}
+			}
+		}
+		.plan {
+			&.plan-most-popular {
+				position: relative;
+				@media (min-width: 992px) {
+					margin-top: -0.8rem;
+				}
+				.plan-title {
+					h3, em {
+						color: #FFF;
+					}
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,28 @@
+@import "variables";
+
+@color-primary: #D39A01;
+
+@import "skin";
+
+/* 
+* Sticky Header - Active
+*/
+html.sticky-header-active {
+	#header {
+		.header-nav-main {
+			nav {
+				> ul {
+					> li {
+						&:hover,
+						&:focus,
+						&.active {
+							> a {
+								color: @color-primary;
+							}	
+						}
+					}
+				}
+			}
+		}
+	}
+}

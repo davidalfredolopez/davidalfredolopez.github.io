@@ -1,0 +1,25 @@
+/* Sidebar */
+.sidebar {
+	.sidebar-search {
+		input {
+	        padding: 0.7rem 2.2rem 0.7rem 0.7rem;
+		}
+		button {
+			position: absolute;
+			top: 0;
+			right: 0;
+		    border: 0;
+		    background-color: transparent;
+		    height: 100%;
+		    z-index: 3 !important;
+		    i {
+		    	color: $color-skin-default;
+		    }
+		}
+	}
+
+	.sort-source > div > a, 
+	.sort-source > li > a {
+		font-family: $font-secondary;
+	}
+}

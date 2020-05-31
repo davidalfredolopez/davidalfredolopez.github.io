@@ -1,0 +1,147 @@
+/* #Footer */
+#footer {
+	background: #1C1F21;
+	margin-top: 50px;
+	h1, h2, h3, h4, h5  {
+		color: $color-light;
+	}
+	h2 {
+		font-weight: 500;
+	}
+	li {
+		color: $color-font-default-2;
+	}
+	a {
+		&.highlight-underlined-light {
+			color: $color-light;
+		    text-decoration: underline;
+		    font-weight: 100;
+		}
+
+		&.highlight-underlined-dark {
+			color: $color-dark;
+		    text-decoration: underline;
+		    font-weight: 100;
+		}
+	}
+
+	// Footer Hover Links Light
+	&.footer-hover-links-light {
+		a:not(.btn) {
+			transition: ease all 300ms;
+			&:hover {
+				color: $color-light;
+				border-color: $color-light;
+			}
+		}
+	}
+
+	// Footer Text Light
+	&.footer-text-light {
+		h1, h2, h3, h4, h5, h6, p, a, span, li, strong {
+			color: $color-light;
+		}
+	}
+
+	// Footer Colors
+	&.footer-colors {
+		a:hover:not(.link-underline-light) {
+			text-decoration: underline;
+		}
+	}
+
+	> .container {
+		> .row {
+			padding-top: 4rem;
+		}
+	}
+
+	.logo {
+		img {
+			max-width: 122px;
+		}
+	}
+
+	.footer-top-featured-boxes {
+
+		.featured-box {
+			h4 {
+				line-height: 1.2;
+				font-weight: 500;
+				font-size: 1.1em;
+				padding-top: 4px;
+			}
+
+			&:nth-child(1) {
+				img {
+					height: 50px;
+				}
+			}
+
+			&:nth-child(2) {
+				img {
+					height: 45px;
+					left: 37px;
+				}
+			}
+
+			&:nth-child(3) {
+				img {
+					height: 44px;
+					top: 40px;
+					left: 27px;
+				}
+			}
+		}
+
+	}
+
+	// Footer Reveal
+	&.footer-reveal {
+		position: fixed;
+	    bottom: 0;
+	    left: 0;
+	    width: 100%;
+	    z-index: -10;
+	}
+
+	.footer-copyright {
+		background: #1C1F21;
+		margin-top: 5em;
+	    padding: 2em 0;
+	    &.footer-copyright-border-top {
+	    	border-top: 1px solid #E2E4E8;
+	    }
+	    &.footer-copyright-border-top-2 {
+	    	border-top: 1px solid #252525;
+	    }
+	    &.footer-copyright-container-border-top {
+	    	position: relative;
+	    	&:before {
+	    		content: '';
+	    		display: block;
+	    		position: absolute;
+	    		top: 0;
+	    		left: 50%;
+	    		width: 100vw;
+	    		max-width: 1140px;
+		    	border-bottom: 1px solid #E2E4E8;
+	    		transform: translate3d(-50%, 0, 0);
+	    	}
+	    }
+	    &.footer-copyright-landing-bg-color {
+	    	background-color: #202528;
+	    }
+		p {
+			font-size: 0.9em;
+		}
+	}
+
+	.section-skew {
+		.footer-copyright {
+			position: relative;
+			background: transparent;
+			z-index: 2;
+		}
+	}
+}

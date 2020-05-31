@@ -1,0 +1,130 @@
+/* Progress Bars */
+.progress-bar-wrapper {
+	&.progress-bar-style-1 {
+		.progress-bar-info {
+			margin-bottom: 0.2rem;
+			position: relative;
+			label {
+				font-weight: $font-weight-bold !important;
+				font-size: em(14);
+				color: $color-dark;
+			}
+			.progress-bar-percent {
+				float: right;
+				font-size: 0.85em;
+				margin-top: 0.2em;
+			}
+		}
+		.progress {
+			overflow: visible;
+			text-align: right;
+			height: auto;
+		}
+		.progress-bar {
+			position: relative;
+			height: 0.2rem;
+			&:after {
+				content: '';
+				width: 12px;
+				height: 12px;
+				border: 0.2rem solid #333;
+				border-radius: 50%;
+				position: absolute;
+				#{$right}: 0;
+				top: -4px;
+				margin: 0 -4px -4px;
+				background: #FFF;
+			}
+		}
+	}
+
+	&.progress-bar-style-2 {
+		text-align: center;
+		.progress-bar-info {
+			margin: 0 auto 0.7rem;
+			position: relative;
+			transform: rotate(-20deg);
+			label {
+				font-weight: $font-weight-bold !important;
+				font-size: em(14);
+				color: $color-dark;
+			}
+			.progress-bar-percent {
+				font-size: 0.85em;
+				margin-top: 0.2em;
+			}
+		}
+		.progress {
+			width: 0.2rem;
+			height: 0.2rem;
+			min-height: 200px;
+			display: flex;
+			align-items: flex-end;
+			margin: 0 auto 1rem;
+			overflow: visible;
+		}
+		.progress-bar {
+			position: relative;
+			width: 100%;
+			margin: 0 auto;
+			&:before {
+				content: '';
+				width: 12px;
+				height: 12px;
+				border: 0.2rem solid #333;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: -4px;
+				margin: -6px 0 0 0px;
+				background: #FFF;
+			}
+		}
+	}
+}
+
+.progress {
+	height: auto;
+	.progress-bar {
+		height: 1rem;
+		width: 0;
+		transition: ease-in-out width 900ms, ease-in-out height 900ms;
+		&.bg-dark {
+			background-color: $color-dark;
+			&:after {
+				border-color: $color-dark;
+			}
+		}
+		&.bg-light {
+			background-color: $color-light;
+			&:after {
+				border-color: $color-light;
+			}
+		}
+
+		&.progress-bar-small {
+			height: 10px;
+		}
+	}	
+}
+
+/* Circular Bar */
+.circular-bar {
+	text-align: center;
+	position: relative;
+	min-height: 150px;
+
+	label {
+		display: block;
+		font-size: em(24);
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin: 0;
+		transform: translate(-50%,-50%);
+		max-width: 80%;
+		font-weight: $font-weight-extra-bold;
+		color: $color-dark;
+	}
+
+}

@@ -1,0 +1,152 @@
+/* Call to Action */
+.call-to-action {
+	display: flex;
+	flex-wrap: wrap;
+    padding: em(60) 0;
+
+    h1, h2, h3, h4, h5, h6 {
+    	margin-bottom: 0;
+    }
+
+    h2 {
+    	font-size: 2.1em;
+    }
+
+    p {
+    	font-size: 1.1em;
+    }
+
+    .btn {
+		display: flex;
+		align-items: center;
+    	&:not([class*="btn-icon-effect"]) {
+    		strong {
+				font-size: 1.2rem;
+				margin-#{$left}: 0.8rem;
+			}
+    	}
+    }
+
+	> [class*="col-"] {
+		display: flex;
+	    align-items: center;
+	    &:nth-child(2) {
+	    	justify-content: flex-end;
+			text-align: center;
+			@media (max-width: 767px) {
+				justify-content: center;
+			}
+	    }
+	}
+	
+	// When have a container inside
+	.container, .container-fluid {
+		position: relative;
+		z-index: 3;
+		> .row {
+			display: flex;
+			flex-wrap: wrap;
+			> [class*="col-"] {
+				display: flex;
+			    align-items: center;
+			    &:nth-child(2) {
+			    	justify-content: flex-end;
+					text-align: center;
+					@media (max-width: 767px) {
+						justify-content: center;
+					}
+			    }
+			}
+		}
+	}
+
+	// If has not a col-xs class
+	@media(max-width: 767px) {
+		> [class*="col-"]:not([class*="col-xs"]) {
+			width: 100%;
+		}
+
+		.container {
+			> .row {
+				[class*="col-"]:not([class*="col-xs"]) {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&.call-to-action-height-1 {
+		padding: 1.5384615385rem 0;
+	}
+	&.call-to-action-height-2 {
+		padding: 3.0769230769rem 0;
+	}
+	&.call-to-action-height-3 {
+		padding: 4.6153846154rem 0;
+	}
+	&.call-to-action-height-4 {
+		padding: 6.1538461538rem 0;
+	}
+	&.call-to-action-height-5 {
+		padding: 7.6923076923rem 0;
+	}
+
+	&.call-to-action-text-light {
+		.call-to-action-content {
+			h1, h2, h3, h4, h5, h6, p, a:not(.btn), span {
+				color: $color-light;
+			}	
+		}
+	}
+
+	/* If have parallax */
+	.parallax-background {
+		z-index: 0 !important;
+	}
+
+	/* Call To Action with Text Background */
+	&.call-to-action-text-background {
+		position: relative;
+		overflow: hidden;
+		.text-background {
+			position: absolute;
+		    left: 50%;
+		    bottom: 0;
+		    width: 100%;
+		    font-size: 5em;
+		    line-height: 0.1;
+		    opacity: 0.1;
+		    text-align: center;
+		    white-space: nowrap;
+		    transform: translateX(-50%);
+		    @media (min-width: 768px) {
+		    	max-width: 710px;
+		    	font-size: 8em;
+		    }
+		    @media (min-width: 992px) {
+		    	max-width: 940px;
+		    	text-align: right;
+		    }
+		    @media (min-width: 1200px) {
+		    	max-width: 1140px;
+		    	font-size: 11em;
+		    }
+		    &.appear-animation {
+		    	opacity: 0;
+		    }
+		}
+	} 
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+	.call-to-action {
+		.call-to-action-content,
+		.call-to-action-btn {
+			margin: 0;
+			padding: 20px;
+			position: static;
+			width: auto;
+		}
+	}
+}

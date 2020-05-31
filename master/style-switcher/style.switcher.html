@@ -1,0 +1,82 @@
+<!-- Style Switcher - Start -->
+<div id="styleSwitcher" class="style-switcher">
+
+	<a id="styleSwitcherOpen" class="style-switcher-open" href="#"><i class="fas fa-cogs"></i></a>
+
+	<div class="style-switcher-wrap">
+
+		<h4>Style Switcher</h4>
+
+		<h5>Primary Color</h5>
+		<div class="input-group input-group-sm color-primary">
+			<input type="text" value="#2388ed" class="form-control left-rounded" />
+			<div class="input-group-append">
+				<span class="input-group-text input-group-addon"><i></i></span>
+			</div>
+		</div>
+
+		<h5>Borders Style</h5>
+		<div class="options-links borders">
+			<a class="active" data-border-radius="4px" href="#">Rounded</a>
+			<a data-border-radius="0" href="#">Square</a>
+		</div>
+
+		<h5>Layout Style</h5>
+		<div class="options-links layout">
+			<a class="active" data-layout-type="wide" href="multi-purpose-1.html">Wide</a>
+			<a data-layout-type="boxed" href="feature-layout-boxed.html">Boxed</a>
+			<a data-layout-type="dark" href="feature-layout-dark.html">Dark</a>
+			<a data-layout-type="rtl" href="feature-layout-rtl.html">RTL</a>
+		</div>
+
+		<div class="patterns" style="display: none;">
+			<h5>Background Patterns</h5>
+			<ul class="options" data-type="patterns">
+				<li><a class="pattern" style="background-image: url(img/patterns/gray_jean.png);" data-pattern="gray_jean" href="#" title="Gray_jean"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/linedpaper.png);" data-pattern="linedpaper" href="#" title="Linedpaper"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/az_subtle.png);" data-pattern="az_subtle" href="#" title="Az_subtle"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/blizzard.png);" data-pattern="blizzard" href="#" title="Blizzard"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/denim.png);" data-pattern="denim" href="#" title="Denim"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/fancy_deboss.png);" data-pattern="fancy_deboss" href="#" title="Fancy_deboss"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/honey_im_subtle.png);" data-pattern="honey_im_subtle" href="#" title="Honey_im_subtle"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/linen.png);" data-pattern="linen" href="#" title="Linen"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/pw_maze_white.png);" data-pattern="pw_maze_white" href="#" title="Pw_maze_white"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/skin_side_up.png);" data-pattern="skin_side_up" href="#" title="Skin_side_up"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/stitched_wool.png);" data-pattern="stitched_wool" href="#" title="Stitched_wool"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/straws.png);" data-pattern="straws" href="#" title="Straws"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/subtle_grunge.png);" data-pattern="subtle_grunge" href="#" title="Subtle_grunge"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/textured_stripes.png);" data-pattern="textured_stripes" href="#" title="Textured_stripes"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/wild_oliva.png);" data-pattern="wild_oliva" href="#" title="Wild_oliva"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/worn_dots.png);" data-pattern="worn_dots" href="#" title="Worn_dots"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/bright_squares.png);" data-pattern="bright_squares" href="#" title="Bright_squares"></a></li>
+				<li><a class="pattern" style="background-image: url(img/patterns/random_grey_variations.png);" data-pattern="random_grey_variations" href="#" title="Random_grey_variations"></a></li>
+			</ul>
+
+		</div>
+
+		<div class="style-switcher-buttons options-links">
+			<a href="#" class="reset">Reset</a>
+			<a href="#getCSSModal" class="get-css"><i class="fas fa-file-alt"></i> Get Skin CSS</a>
+		</div>
+
+	</div>
+
+</div>
+
+<div class="modal fade" id="getCSSModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="cssModalLabel">Skin CSS</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-info fade in" id="addBoxedClassInfo">
+					Please add the <strong>&quot;boxed&quot;</strong> class to the &lt;html&gt; element.
+				</div>
+				<textarea id="getCSSTextarea" class="get-css" readonly></textarea>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Style Switcher - End -->

@@ -1,0 +1,22 @@
+@import "variables";
+
+@color-primary: #FFAE06;
+
+@import "skin";
+
+/*
+* Nav
+*/
+.nav {
+	&.custom-nav-style-1 {
+		> .nav-item {
+			> .nav-link {
+				&.active {
+					&:before {
+						background: @color-primary;
+					}
+				}
+			}
+		}
+	}
+}

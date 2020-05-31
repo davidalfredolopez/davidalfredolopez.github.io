@@ -1,0 +1,39 @@
+/* Slider Range */
+.slider-range-wrapper {
+	padding-top: 10px;
+	.slider-range {
+		height: 3px;
+		border: none;
+	    background: #f1f1f1;
+	    box-shadow: none;
+		.noUi-connect {
+			background-color: $color-skin-default;
+		}
+		.noUi-handle {
+			background-color: $color-skin-default;
+			width: 12px;
+			height: 12px;
+			border-radius: 100%;
+			border: none;
+			box-shadow: none;
+		    top: -5px;
+		    left: -11px;
+		    right: -7px !important;
+		    cursor: pointer;
+		    outline: none;
+			&:after,
+			&:before {
+				content: none;
+			}
+		}
+	}
+	form {
+		input {
+			background: transparent;
+		    border: none;
+		    max-width: 40px;
+		    color: #707070;
+		    font-size: 0.9rem;
+		}
+	}
+}

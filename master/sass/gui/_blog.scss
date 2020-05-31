@@ -1,0 +1,123 @@
+/* Blog */
+.blog-post {
+	.blog-post-header {
+		position: relative;
+		overflow: hidden;
+		&:hover {
+			.post-format-icon {
+				opacity: 1;
+				transform: translate3d(0, 0, 0);
+			}
+		}
+
+		.post-format-icon {
+			position: absolute;
+			left: 15px;
+			bottom: 15px;
+			opacity: 0;
+			pointer-events: none;
+			z-index: 2;
+			transform: translate3d(0, 100px, 0);
+			transition: cubic-bezier(.55,0,.1,1) transform 300ms 200ms, cubic-bezier(.55,0,.1,1) opacity 300ms;
+		}
+	}
+}
+
+/* Comments */
+ul.comments {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		padding: side-values(10px 0 0 55px);
+		img.avatar {
+			height: 55px;
+			width: 55px;
+		}
+		ul.reply {
+			margin: 0;
+		}
+		a {
+			text-decoration: none;
+		}
+		.avatar {
+			margin-#{$left}: -55px;
+			margin-top: 1rem;
+		}
+		.comment {
+			display: flex;
+			margin-bottom: 10px;
+		}
+	}
+	.comment-block {
+		border-radius: 5px;
+		padding: 20px 20px 30px;
+		position: relative;
+		width: 100%;
+		p {
+			font-size: 0.9em;
+			line-height: 21px;
+			margin: 0;
+			padding: 0;
+		}
+		.comment-by {
+			display: flex;
+			align-items: center;
+			font-size: 1em;
+			line-height: 21px;
+			margin: 0;
+			padding: 0 0 5px 0;
+			.comment-date {
+				padding: 0 1rem;
+				margin: 0 1rem;
+				border-right: 1px solid #dadada;
+				border-left: 1px solid #dadada;
+			}
+			.comment-rating {
+				padding: 0 1rem 0 0;
+				margin: 0 1rem 0 0;
+				border-right: 1px solid #dadada;
+			}
+		}
+	}
+}
+
+
+
+/* Responsive */
+@media (max-width: 991px) {
+
+	ul.comments {
+		.comment-block {
+			.comment-by {
+			    flex-direction: column;
+			    align-items: start;
+			    .comment-author {
+			    	margin-bottom: 0.3rem;
+			    }
+			    .comment-date {
+			    	border: 0;
+			    	margin: 0;
+			    	padding: 0;
+			    }
+			    .comment-reply {
+			    	position: absolute;
+			    	top: 1rem;
+			    	right: 1rem;
+			    }
+			}
+		}
+	}	
+
+}
+
+@media (max-width: 575px) {
+
+	ul.comments {
+		li {
+			border-#{$left}: 8px solid #DDDDDD;
+			padding: side-values(0 0 0 10px);
+		}
+	}	
+
+}

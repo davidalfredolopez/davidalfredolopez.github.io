@@ -1,0 +1,450 @@
+/* Mask Up */
+@keyframes maskUp {
+	from {
+	    transform: translate(0, 100%);
+	}
+
+	to {
+	    transform: translate(0, 0);
+	}
+}
+
+/* Mask Right */
+@keyframes maskRight {
+	from {
+	    transform: translate(-100%, 0);
+	}
+
+	to {
+	    transform: translate(0, 0);
+	}
+}
+
+/* Mask Down */
+@keyframes maskDown {
+	from {
+	    transform: translate(0, -100%);
+	}
+
+	to {
+	    transform: translate(0, 0);
+	}
+}
+
+/* Mask Left */
+@keyframes maskLeft {
+	from {
+	    transform: translate(100%, 0);
+	}
+
+	to {
+	    transform: translate(0, 0);
+	}
+}
+
+/* Fade In Up Shorter */
+@keyframes fadeInUpShorter {
+	from {
+	    opacity: 0;
+	    transform: translate(0, 50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+/* Fade In Left Shorter */
+@keyframes fadeInLeftShorter {
+	from {
+	    opacity: 0;
+	    transform: translate(50px, 0);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: translate(0, 0);
+	}
+}
+
+/* Fade In Right Shorter */
+@keyframes fadeInRightShorter {
+	from {
+	    opacity: 0;
+	    transform: translate(-50px, 0);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: translate(0, 0);
+	}
+}
+
+/* Fade In Down Shorter */
+@keyframes fadeInDownShorter {
+	from {
+	    opacity: 0;
+	    transform: translate(0, -50px);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: translate(0, 0);
+	}
+}
+
+/* Fade In Down Shorter - Absolute Center */
+@keyframes fadeInDownShorterAbsCenter {
+	from {
+	    opacity: 0;
+	    transform: translate(-50%, -50px);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: translate(-50%, 0);
+	}
+}
+
+/* Expand In */
+@keyframes expandIn {
+	from {
+	    opacity: 0;
+	    transform: scale(0.8);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: scale(1);
+	}
+}
+
+/* Blur In */
+@keyframes blurIn {
+	from {
+		opacity: 0;
+	    filter: blur(20px);
+    	transform: scale(1.3);
+	}
+
+	to {
+		opacity: 1;
+	    filter: blur(0);
+    	transform: none;
+	}
+}
+
+/* Carousel Fade In Right */
+@keyframes doubleCarouselFadeInRight {
+	from {
+	    opacity: 0;
+	    transform: translate(15%, -50%);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: translate(0, -50%);
+	}
+}
+
+/* Carousel Fade In Left */
+@keyframes doubleCarouselFadeInLeft {
+	from {
+	    opacity: 0;
+	    transform: translate(-15%, -50%);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: translate(0, -50%);
+	}
+}
+
+/* Steps Fade In Up */
+@include if-ltr() {
+	@keyframes stepsFadeInUp {
+		from {
+		    opacity: 0;
+		    transform: translate(-50%, 25%);
+		}
+
+		to {
+		    opacity: 1;
+		    transform: translate(-50%, -50%);
+		}
+	}
+}
+
+@include if-rtl() {
+	@keyframes stepsFadeInUp {
+		from {
+		    opacity: 0;
+		    transform: translate(-50%, 25%) rotateY(180deg);
+		}
+
+		to {
+		    opacity: 1;
+		    transform: translate(-50%, -50%) rotateY(180deg);
+		}
+	}
+}
+
+/* Steps Fade In Left */
+@keyframes stepsFadeInLeft {
+	from {
+	    opacity: 0;
+	    transform: translate(-75%, -50%);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: translate(-50%, -50%);
+	}
+}
+
+/* Steps Fade In Right */
+@keyframes stepsFadeInRight {
+	from {
+	    opacity: 0;
+	    transform: translate(-25%, -50%);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: translate(-50%, -50%);
+	}
+}
+
+/* Text bg Fade In Up */
+@keyframes textBgFadeInUp {
+	from {
+	    opacity: 0;
+	    transform: translate(-50%, 200%);
+	}
+
+	to {
+	    opacity: 0.06;
+	    transform: translate(-50%, 0);
+	}
+}
+
+@keyframes textBgFadeInUpDark {
+	from {
+	    opacity: 0;
+	    transform: translate(-50%, 200%);
+	}
+
+	to {
+	    opacity: 0.02;
+	    transform: translate(-50%, 0);
+	}
+}
+
+/* Text bg Fade In Up 2 */
+@keyframes textBgFadeInUp2 {
+	from {
+	    opacity: 0;
+	    transform: translate(-50%, 200%);
+	}
+
+	to {
+	    opacity: 0.5;
+	    transform: translate(-50%, 0);
+	}
+}
+
+/* Header Reveal */
+@keyframes headerReveal {
+  	from {
+    	top: -150px;
+  	}
+  	
+ 	to {
+    	top: 0;
+  	}
+}
+
+/* Fade In Scale */
+@keyframes fadeInScale {
+	from {
+		opacity: 0;
+	    transform: scale(0.7);
+	}
+
+	to {
+		opacity: 1;
+	    transform: scale(1);
+	}
+}
+
+/* Highlight */
+@keyframes highlight {
+	0% {
+		background-color: transparent;
+	}
+
+	50% {
+		background-color: $color-light-5;
+	}
+
+	100% {
+		background-color: transparent;
+	}
+}
+
+/* Slider Scroll Button Animation */
+@keyframes sliderScrollButton {
+	0% {
+		opacity: 1;
+		transform: translate3d(-50%, 0, 0);
+	}
+
+	70% {
+		opacity: 1;
+		transform: translate3d(-50%, 10px, 0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translate3d(-50%, 10px, 0);
+	}
+}
+
+/* Background Scale Out */
+@keyframes scaleOut {
+	from {
+		transform: scale(1.1);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+/* Animations */
+.animated {
+	animation-duration: 750ms;
+	animation-timing-function: cubic-bezier(0.030, 0.025, 0.000, 0.970);
+}
+
+.appear-animation {
+	opacity: 0;
+}
+
+.appear-animation-visible {
+	opacity: 1;
+}
+
+.maskUp {
+	animation-name: maskUp;
+}
+
+.maskRight {
+	animation-name: maskRight;
+}
+
+.maskDown {
+	animation-name: maskDown;
+}
+
+.maskLeft {
+	animation-name: maskLeft;
+}
+
+.fadeInUpShorter {
+	animation-name: fadeInUpShorter;
+}
+
+.fadeInLeftShorter {
+	animation-name: fadeInLeftShorter;
+}
+
+.fadeInRightShorter {
+	animation-name: fadeInRightShorter;
+}
+
+.fadeInDownShorter {
+	animation-name: fadeInDownShorter;
+}
+
+.fadeInDownShorterAbsCenter {
+	animation-name: fadeInDownShorterAbsCenter;
+}
+
+.expandIn {
+	animation-name: expandIn;
+}
+
+.blurIn {
+	animation-name: blurIn;
+}
+
+.doubleCarouselFadeInRight {
+	animation-name: doubleCarouselFadeInRight;
+}
+
+.doubleCarouselFadeInLeft {
+	animation-name: doubleCarouselFadeInLeft;
+}
+
+.stepsFadeInUp {
+	animation-name: stepsFadeInUp;
+}
+
+.stepsFadeInLeft {
+	animation-name: stepsFadeInLeft;
+}
+
+.stepsFadeInRight {
+	animation-name: stepsFadeInRight;
+}
+
+.textBgFadeInUp {
+	animation-name: textBgFadeInUp;
+}
+
+.textBgFadeInUpDark {
+	animation-name: textBgFadeInUpDark;
+}
+
+.textBgFadeInUp2 {
+	animation-name: textBgFadeInUp2;
+}
+
+.fadeInScale {
+	animation-name: fadeInScale;
+}
+
+.scaleOut {
+	animation-name: scaleOut;
+}
+
+/* Hover 3d Effect */
+.hover-in {
+	transition: .1s ease-out !important;
+}
+
+.hover-out {
+	transition: .1s ease-in !important;
+}
+
+.hover-3d {
+	transition: none;
+}
+
+/* Hover Anim */
+.hover-anim {
+	&.hover-anim-effect-1 {
+		backface-visibility: hidden;
+		transition: all .7s cubic-bezier(.2,1,.22,1);
+		&:hover {
+			transform: scale(1.15);
+		}
+	}
+}
+
+/* Highlight Anim */
+.highlight-anim {
+	animation-name: highlight;
+	animation-duration: 1s;
+}

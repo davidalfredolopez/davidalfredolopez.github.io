@@ -1,0 +1,101 @@
+/* Cards */
+.card {
+	border: 1px solid $border-color-default;
+	border-radius: 0;
+	background: transparent;
+
+	.card-body {
+		padding: 2.2rem;
+		&.card-body-flex-0 {
+			-ms-flex: 0 0 auto;
+		    flex: 0 0 auto;
+		}
+	}
+
+	&.overlay {
+		.card-body {
+			z-index: 2;
+		}
+	}
+
+	&.card-style-1 {
+		box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+	}
+
+	&.card-style-2 {
+		.card-body {
+			margin: 10px;
+			border: 5px solid $border-color-default;
+		}
+	}
+
+	&.card-style-3 {
+		.card-img-top {
+			max-width: 80px;
+			max-height: 80px;
+			border-radius: 50%;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, -30px);
+			border: 5px solid #FFF;
+		}
+	}
+
+	&.card-style-4 {
+		.card-img-top {
+			position: relative;
+			z-index: 1;
+		}
+
+		.card-body {
+			margin: -5px 20px 0;
+		}
+	}
+
+	&.card-style-5 {
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: $color-light-5;
+			border-radius: .25rem;
+			opacity: 1;
+			z-index: 0;
+			transition: ease opacity 300ms;
+		}
+		&:hover {
+			&:before {
+				opacity: 0;
+			}
+
+			.card-body {
+				background: rgba($color-light, 0.8);
+			}
+		}
+
+		.card-body {
+			background: rgba($color-light, 0);
+			z-index: 1;
+			transition: ease background 300ms;
+		}
+	}
+}
+
+/* IE */
+html.ie {
+	.card {
+		> a {
+			flex: 0 0 auto;
+		}
+		.card-body {
+			height: 100%;
+		}
+	}
+
+	.card-img-top {
+		flex-shrink: 0;
+	}
+}

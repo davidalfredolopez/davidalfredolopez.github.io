@@ -1,0 +1,657 @@
+// SIZES
+// -----------------------------------------------------------------------------
+.text-0 {
+	font-size: .70rem !important;
+}
+
+.text-1 {
+	font-size: .80rem !important;
+}
+
+.text-2 {
+	font-size: .90rem !important;
+}
+
+.text-3 {
+	font-size: 1rem !important;
+}
+
+.text-4 {
+	font-size: 1.1rem !important;
+}
+
+.text-5 {
+	font-size: 1.50rem !important;
+}
+
+.text-6 {
+	font-size: 1.80rem !important;
+}
+
+.text-7 {
+	font-size: 2rem !important;
+}
+
+.text-8 {
+	font-size: 2.30rem !important;
+}
+
+.text-9 {
+	font-size: 2.50rem !important;
+}
+
+.text-10 {
+	font-size: 2.75rem !important;
+}
+
+.text-11 {
+	font-size: 3rem !important;
+}
+
+.text-12 {
+	font-size: 3.25rem !important;
+}
+
+.text-13 {
+	font-size: 3.50rem !important;
+}
+
+.text-14 {
+	font-size: 3.75rem !important;
+}
+
+.text-15 {
+	font-size: 4rem !important;
+}
+
+.text-16 {
+	font-size: 4.5rem !important;
+}
+
+.text-17 {
+	font-size: 5rem !important;
+}
+
+.text-18 {
+	font-size: 5.3rem !important;
+}
+
+.text-19 {
+	font-size: 5.8rem !important;
+}
+
+.text-20 {
+	font-size: 6.5rem !important;
+}
+
+@media(max-width: 1199px) {
+	.text-15.resp-text-15 {
+		font-size: 3.5rem !important;
+	}
+}
+
+@media(max-width: 991px) {
+	.text-5.resp-text-5 {
+		font-size: 1.3rem !important;
+	}
+
+	.text-15.resp-text-15 {
+		font-size: 3rem !important;
+	}
+}
+
+@media(max-width: 767px) {
+	.text-5.resp-text-5 {
+		font-size: 1.2rem !important;
+	}
+
+	.text-15.resp-text-15 {
+		font-size: 2.5rem !important;
+	}
+}
+
+@media(max-width: 575px) {
+	.text-5.resp-text-5 {
+		font-size: 1.1rem !important;
+	}
+
+	.text-15.resp-text-15 {
+		font-size: 2.3rem !important;
+	}
+}
+
+// LINE HEIGHT
+// -----------------------------------------------------------------------------
+.line-height-07 {
+	line-height: 0.7 !important;
+}
+
+.line-height-1 {
+	line-height: 1 !important;
+}
+
+.line-height-2 {
+	line-height: 1.2 !important;
+}
+
+.line-height-3 {
+	line-height: 1.4 !important;
+}
+
+.line-height-4 {
+	line-height: 1.6 !important;
+}
+
+.line-height-5 {
+	line-height: 1.8 !important;
+}
+
+// MOBILE TEXT SIZE - ONLY EXTRA SMALL RESOLUTION
+// -----------------------------------------------------------------------------
+@media(max-width: 575px) {
+	.mobile-text-1 {
+		font-size: 5vw !important;
+	}
+
+	.mobile-text-2 {
+		font-size: 7vw !important;
+	}
+
+	.mobile-text-3 {
+		font-size: 12vw !important;
+	}
+
+	.mobile-text-4 {
+		font-size: 15vw !important;
+	}
+
+	.mobile-text-5 {
+		font-size: 18vw !important;
+	}
+}
+
+// LETTER SPACING
+// -----------------------------------------------------------------------------
+.letter-spacing-n1 {
+	letter-spacing: -1px;
+}
+
+.letter-spacing-n6 {
+	letter-spacing: -6px;
+}
+
+.letter-spacing-0 {
+	letter-spacing: 0;
+}
+
+.letter-spacing-5 {
+	letter-spacing: 5px;
+}
+
+.letter-spacing-10 {
+	letter-spacing: 10px;
+}
+
+// WIDTH
+// -----------------------------------------------------------------------------
+.width-auto {
+	width: auto;
+}
+
+// POINTER EVENTS
+// -----------------------------------------------------------------------------
+.pointer-events-none {
+	pointer-events: none !important;
+}
+
+// WEIGHTS
+// -----------------------------------------------------------------------------
+.font-weight-thin {
+	font-weight: $font-weight-thin !important;
+}
+
+.font-weight-light {
+	font-weight: $font-weight-light !important;
+}
+
+.font-weight-normal {
+	font-weight: $font-weight-normal !important;
+}
+
+.font-weight-semibold {
+	font-weight: $font-weight-semibold !important;
+}
+
+.font-weight-bold {
+	font-weight: $font-weight-bold !important;
+}
+
+.font-weight-extra-bold {
+	font-weight: $font-weight-extra-bold !important;
+}
+
+// NEGATIVE MARGIN TOP
+// -----------------------------------------------------------------------------
+.mt-negative-1 {
+	margin-top: -1rem;
+}
+
+.mt-negative-2 {
+	margin-top: -1.5rem;
+}
+
+.mt-negative-3 {
+	margin-top: -3rem;
+}
+
+.mt-negative-4 {
+	margin-top: -4.5rem;
+}
+
+// BORDERS - BS4 already have border helpers, but without !important
+// -----------------------------------------------------------------------------
+.border-radius-0 {
+	border-radius: 0 !important;
+}
+
+// ITALIC
+// -----------------------------------------------------------------------------
+.font-style-italic {
+	font-style: italic !important;
+}
+
+// FONT FAMILY
+// -----------------------------------------------------------------------------
+.font-primary {
+	font-family: $font-primary !important;
+}
+
+.font-secondary {
+	font-family: $font-secondary !important;
+}
+
+.font-tertiary {
+	font-family: $font-tertiary !important;
+}
+
+.font-quaternary {
+	font-family: $font-quaternary !important;
+}
+
+// TEXT OTHERS
+// -----------------------------------------------------------------------------
+.text-uppercase {
+	text-transform: uppercase !important;
+}
+
+.text-lowercase {
+	text-transform: lowercase !important;
+}
+
+.text-capitalize {
+	text-transform: capitalize !important;
+}
+
+.text-underline {
+	text-decoration: underline !important;
+}
+
+.text-line-trough {
+	text-decoration: line-through !important;
+}
+
+// FLEX
+// -----------------------------------------------------------------------------
+.flex-0-0-auto {
+	flex: 0 0 auto !important;
+}
+
+// SCALE
+// -----------------------------------------------------------------------------
+.scale-1 {
+	transform: scale(1.2);
+}
+
+.scale-2 {
+	transform: scale(2);
+}
+
+.scale-3 {
+	transform: scale(3);
+}
+
+// ABSOLUTE POSITION
+// -----------------------------------------------------------------------------
+.abs-pos-bottom-right {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+// TRANSFORM CENTER
+// -----------------------------------------------------------------------------
+.transform-center-x {
+	left: 50%;
+	transform: translate3d(-50%, 0, 0);
+}
+
+.transform-center-y {
+	top: 50%;
+	transform: translate3d(0, -50%, 0);
+}
+
+.transform-center-xy {
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
+}
+
+// OVERFLOW
+// -----------------------------------------------------------------------------
+.overflow-hidden {
+	overflow: hidden !important;
+}
+
+.overflow-visible {
+	overflow: visible !important;
+}
+
+.overflow-scroll {
+	overflow: scroll !important;
+}
+
+// HELPERS
+// -----------------------------------------------------------------------------
+.va-middle {
+	vertical-align: middle;
+}
+
+.ws-nowrap {
+	white-space: nowrap;
+}
+
+.ws-normal {
+	white-space: normal;
+}
+
+// Z-INDEX
+// -----------------------------------------------------------------------------
+.z-index-0 {
+	z-index: 0 !important;
+}
+
+.z-index-1 {
+	z-index: 1 !important;
+}
+
+.z-index-2 {
+	z-index: 2 !important;
+}
+
+.z-index-3 {
+	z-index: 3 !important;
+}
+
+.z-index-10 {
+	z-index: 10 !important;
+}
+
+// BOX SHADOW
+// -----------------------------------------------------------------------------
+.box-shadow-none {
+	box-shadow: none !important;
+}
+
+// HEIGHTS
+// -----------------------------------------------------------------------------
+.height-1 {
+	height: 18.25vw !important;
+	@media(max-width: 991px) {
+		height: 23vw !important;
+	}
+	@media(max-width: 767px) {
+		height: 100vw !important;
+	}
+	@media (min-width: 576px) and (max-width: 991px) {
+		min-height: 300px;
+	}
+}
+
+.height-1x2 {
+	height: 36.50vw !important;
+	@media(max-width: 991px) {
+		height: 46vw !important;
+	}
+	@media(max-width: 767px) {
+		height: 100vw !important;
+	}
+	@media (min-width: 576px) and (max-width: 991px) {
+		min-height: 600px;
+	}
+}
+
+.height-2 {
+	height: 16.25vw !important;
+	@media(max-width: 991px) {
+		height: 26vw !important;
+	}
+	@media(max-width: 767px) {
+		height: 100vw !important;
+	}
+}
+
+.height-2x2 {
+	height: 32.50vw !important;
+}
+
+.height-3 {
+	height: 23.25vw !important;
+	@media(max-width: 991px) {
+		height: 33vw !important;
+	}
+	@media(max-width: 767px) {
+		height: 100vw !important;
+	}
+}
+
+.height-3x3 {
+	height: 46.50vw !important;
+}
+
+.height-500 {
+	height: 500px;
+}
+
+.height-100vh {
+	height: 100vh;
+}
+
+// MIN HEIGHT
+// -----------------------------------------------------------------------------
+.min-height-200 {
+	min-height: 200px;
+}
+
+.min-height-236 {
+	min-height: 236px;
+}
+
+.min-height-285 {
+	min-height: 285px;
+}
+
+.min-height-300 {
+	min-height: 300px;
+}
+
+.min-height-370 {
+	min-height: 370px;
+}
+
+.min-height-450 {
+	min-height: 450px;
+}
+
+.min-height-550 {
+	min-height: 450px;
+}
+
+.min-height-680 {
+	min-height: 680px;
+}
+
+.min-height-750 {
+	min-height: 750px;
+}
+
+.min-height-800 {
+	min-height: 800px;
+}
+
+.min-height-900 {
+	min-height: 900px;
+}
+
+.min-height-32vw {
+	min-height: 32vw;
+}
+
+.min-height-100vh {
+	min-height: 100vh;
+}
+
+.min-height-calc-1 {
+	min-height: calc(100vh - 118px);
+}
+
+// MAX WIDTH
+// -----------------------------------------------------------------------------
+.max-width-150 {
+	max-width: 150px;
+}
+
+.max-width-200 {
+	max-width: 200px;
+}
+
+.max-width-250 {
+	max-width: 250px;
+}
+
+.max-width-320 {
+	max-width: 320px;
+}
+
+.max-width-400 {
+	max-width: 400px;
+}
+
+// SCROLL
+// -----------------------------------------------------------------------------
+.no-vertical-scroll {
+	overflow-y: hidden;
+}
+
+.no-horizontal-scroll {
+	overflow-x: hidden;
+}
+
+// GRID
+// -----------------------------------------------------------------------------
+
+// 5 Equal Columns
+.col-1-5, .col-sm-1-5, .col-md-1-5, .col-lg-1-5, .col-xl-1-5, .col-2-5, .col-sm-2-5, .col-md-2-5, .col-lg-2-5, .col-xl-2-5, .col-3-5, .col-sm-3-5, .col-md-3-5, .col-lg-3-5, .col-xl-3-5, .col-4-5, .col-sm-4-5, .col-md-4-5, .col-lg-4-5, .col-xl-4-5 {
+	position: relative;
+	min-height: 1px;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.col-1-5 {
+	@include flexbox(0, 0, 20%);
+}
+
+.col-2-5 {
+	@include flexbox(0, 0, 40%);
+}
+
+.col-3-5 {
+	@include flexbox(0, 0, 60%);
+}
+
+.col-4-5 {
+	@include flexbox(0, 0, 80%);
+}
+
+@media (min-width: 576px) {
+	.col-sm-1-5 {
+		@include flexbox(0, 0, 20%);
+	}
+
+	.col-sm-2-5 {
+		@include flexbox(0, 0, 40%);
+	}
+
+	.col-sm-3-5 {
+		@include flexbox(0, 0, 60%);
+	}
+
+	.col-sm-4-5 {
+		@include flexbox(0, 0, 80%);
+	}
+}
+
+@media (min-width: 768px) {
+	.col-md-1-5 {
+		@include flexbox(0, 0, 20%);
+	}
+
+	.col-md-2-5 {
+		@include flexbox(0, 0, 40%);
+	}
+
+	.col-md-3-5 {
+		@include flexbox(0, 0, 60%);
+	}
+
+	.col-md-4-5 {
+		@include flexbox(0, 0, 80%);
+	}
+}
+
+@media (min-width: 992px) {
+	.col-lg-1-5 {
+		@include flexbox(0, 0, 20%);
+	}
+
+	.col-lg-2-5 {
+		@include flexbox(0, 0, 40%);
+	}
+
+	.col-lg-3-5 {
+		@include flexbox(0, 0, 60%);
+	}
+
+	.col-lg-4-5 {
+		@include flexbox(0, 0, 80%);
+	}
+}
+
+@media (min-width: 1200px) {
+	.col-xl-1-5 {
+		@include flexbox(0, 0, 20%);
+	}
+
+	.col-xl-2-5 {
+		@include flexbox(0, 0, 40%);
+	}
+
+	.col-xl-3-5 {
+		@include flexbox(0, 0, 60%);
+	}
+
+	.col-xl-4-5 {
+		@include flexbox(0, 0, 80%);
+	}
+}

@@ -1,0 +1,32 @@
+@import "variables";
+
+@color-primary: #BF0A26;
+
+@import "skin";
+
+/*
+* Header
+*/
+@media(min-width: 992px) {
+	#header {
+		.header-nav {
+			&.header-nav-line-under-text {
+				&.custom-header-nav-line-under-text-style {
+					.header-nav-main {
+						nav {
+							> ul {
+								> li {
+									> a {
+										&:before {
+											border-color: @color-primary !important;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

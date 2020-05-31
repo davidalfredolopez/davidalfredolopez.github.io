@@ -1,0 +1,96 @@
+/* Counters */
+.counters {
+	.counter {
+		text-align: center;
+		margin: 50px 0;
+		@media (max-width: 767px) {
+			margin: 80px 0;	
+		}
+	}
+
+	strong, 
+	label {
+		font-family: $font-primary;
+	}
+
+	i {
+		display: block;
+		font-size: em(48);
+		line-height: 1;
+		margin-bottom: 0.3rem;
+	}
+
+	strong{
+		display: block;
+		font-weight: 900;
+		font-size: em(48);
+		line-height: 1;
+		margin-bottom: 0.3rem;
+	}
+
+	label {
+		display: block;
+		font-weight: 100;
+		font-size: em(15);
+		line-height: 1;
+	    letter-spacing: 0.5px;
+	}
+
+	&.counters-xs {
+		strong, i {
+			font-size: em(18);
+		}
+
+		label {
+			font-size: em(10);
+		}
+	}
+
+	&.counters-sm {
+		strong, i {
+			font-size: em(28);
+		}
+
+		label {
+			font-size: em(12);
+		}
+	}
+
+	&.counters-lg {
+		strong, i {
+			font-size: em(58);
+		}
+
+		label {
+			font-size: em(17);
+		}
+	}
+
+	&.counters-xl {
+		strong, i {
+			font-size: em(68);
+		}
+
+		label {
+			font-size: em(18);
+		}
+	}
+
+	&.counters-light {
+		.counter {
+			color: $color-light !important;
+			strong, i, label {
+				color: $color-light !important;
+			}
+		}
+	}
+
+	&.counters-dark {
+		.counter {
+			color: $color-dark !important;
+			strong, i, label {
+				color: $color-dark !important;
+			}
+		}
+	}
+}

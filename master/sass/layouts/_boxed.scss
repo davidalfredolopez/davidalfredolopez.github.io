@@ -1,0 +1,97 @@
+/* Boxed Layout */
+html.boxed {
+	body {
+		background-color: #E7E9ED;
+		background-position: 0 0;
+		background-repeat: repeat;
+	}
+	.body {
+		position: relative;
+		background-color: $color-light;
+		margin: 25px auto;
+		max-width: 1200px;
+		height: auto;
+		z-index: 0;
+	}
+	#header {
+		.header-body {
+			max-width: 1200px;
+		}
+
+		.header-container {
+			&:after {
+				max-width: 1200px;
+			}
+		}
+
+		.header-nav-main {
+			nav {
+				> ul {
+					> li {
+						&.dropdown-mega {
+							> .dropdown-menu {
+								max-width: 1200px;
+								border-radius: 0 !important;
+							}
+							.dropdown-mega-sub-content-block {
+								border-radius: 0 !important;
+							}
+						}
+						.dropdown-menu {
+							border-radius: 0 !important;
+						}
+					}
+				}
+			}
+		}
+	}
+	.main {
+		overflow: hidden;
+	}
+
+	// Text Bavcground
+	section {
+		&.section.section-text-overlay {
+			.text-background {
+				font-size: 9vw;
+				line-height: 1.3vw;
+			}
+		}
+	}
+
+	// Double Carousel
+	@media(min-width: 1200px) {
+		.double-carousel {
+			flex-basis: 100vw;
+			max-width: none;
+			left: 50%;
+			transform: translate3d(-50%, 0, 0);
+		}
+	}
+			
+}
+
+/* Responsive */
+@media (min-width: 1140px) {
+
+	// Sticky Header
+	html.boxed.sticky-header-active {
+		#header {
+			.header-body {
+				width: 100%;
+				max-width: 1200px;
+			}
+		}
+	}
+
+}
+
+@media (max-width: 991px) {
+
+	html.boxed {
+		.body {
+			margin: 0 auto;
+		}
+	}
+
+}

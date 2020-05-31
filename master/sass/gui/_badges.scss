@@ -1,0 +1,50 @@
+/* Badges */
+.badge {
+	&.badge-xs {
+		padding: 0.3em 0.5em;
+	}
+	&.badge-sm {
+		padding: 0.5em 0.8em;
+	}
+	&.badge-md {
+		padding: 1em 1.6em;
+		font-size: 85%;
+	}
+	&.badge-lg {
+		padding: 1.5em 2em;
+		font-size: 90%;
+	}
+	&.badge-xl {
+		padding: 2em 2.5em;
+		font-size: 100%;
+	}
+}
+
+/* Shop Badges */
+.product-badge {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	text-align: center;
+	z-index: 1;
+	> span {
+	    font-size: 0.7rem;
+	    color: $color-light;
+	    font-weight: 600;
+	    text-transform: uppercase;
+	    padding: 0.1rem 0.9rem;
+	    border-radius: 4px;
+	    min-width: 57px;
+	    display: block;
+		&.discount {
+			background-color: #2186EB;
+		}
+		&.hot {
+			background-color: #F73B3B;
+		}
+	}
+}
+
+.product-badge + .product-badge {
+	top: 40px;
+}

@@ -1,0 +1,167 @@
+/* Dark Layout */
+html {
+	&.dark {
+		.body {
+			background-color: $color-dark;
+		}
+
+		/* Helpers */
+		.border {
+			border-color: $color-dark-5 !important;
+		}
+
+		/* Header */
+		#header {
+			.header-top {
+				border-bottom-color: $color-dark-5;
+			}
+			.header-body {
+				background: $color-dark;
+			}
+			.header-container {
+				&:after {
+					    border-bottom-color: rgba($color-dark-5, 0.2);
+				}
+			}
+			@media(min-width: 992px) {
+				.header-nav-main-dark {
+					nav > ul > li > a {
+						color: #777;
+					}
+				}
+			}
+
+			// Collapse Nav
+			.header-btn-collapse-nav {
+				.hamburguer {
+					span {
+						background: $color-light;
+					}
+				}
+				.close {
+					span {
+						background: $color-light;
+					}
+				}
+			}
+		}
+
+		// Word Rotator - Type
+		.word-rotator.type {
+	
+			.word-rotator-words {
+				&.waiting::after {
+					animation: 1s word-rotator-pulse-light step-end infinite;
+				} 
+			}
+
+		}
+
+		/* Steps */
+		.steps {
+			.item {
+				&:not(.active) {
+					background: $color-dark !important;
+				}
+
+				.item-title {
+					color: $color-light;
+				    &:after {
+				    	background: $color-dark;
+				    }
+				}
+
+				&.active {
+					border-color: $color-light;
+
+					&:before {
+						border: 6px solid $color-dark;
+					}
+
+					&:after {
+						background: $color-dark;
+					}
+
+					.item-title {
+					    color: $color-dark;
+					}
+				}
+			}
+
+			.dots {
+			    .dots-color-dark {
+				    background: $color-light;
+			    }
+			}
+		}
+		
+		/* Sort */
+		.sort-destination-loader {
+			&:after {
+				background: $color-dark-3;
+			}
+		}
+
+		/* Double Carousel */
+		.double-carousel {
+			.owl-carousel {
+				.owl-item {
+					.card {
+						background: $color-dark-4;
+
+						p, strong {
+							color: $color-light;
+						}
+					}
+				}
+			}
+		}
+
+		/* Section */
+		section.section {
+			&:not([class*="bg-light"]) {
+				h2, h3, h4, h5, h6 {
+					color: $color-light;
+				}
+			}
+			/* Section Content Pull Top 2 */
+			&.section-content-pull-top-2 {
+				> .container:not(.no-pull-top) {
+				    background: $color-dark-3;
+				    box-shadow: 0px -1px 15px -3px rgba($color-dark-1, 0.1);
+				}
+			}
+		}
+
+		/* Learn More */
+		.learn-more {
+		    color: $color-light;
+		    &:hover {
+		    	color: $color-skin-default;
+		    }
+		}
+
+		/* Content Grid */
+		.content-grid {
+			.content-grid-item {
+				&:before {
+					border-left: 1px solid $color-dark-5;
+				}
+				&:after {
+					border-bottom: 1px solid $color-dark-5;
+				}
+			}
+
+			&.content-grid-dashed {
+				.content-grid-item {
+					&:before {
+						border-left: 1px dashed $color-dark-5;
+					}
+					&:after {
+						border-bottom: 1px dashed $color-dark-5;
+					}
+				}
+			}
+		}
+	}
+}

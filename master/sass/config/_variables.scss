@@ -1,0 +1,74 @@
+// =============================================================================
+// TYPOGRAPHY
+// =============================================================================
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+$font-tertiary: 'Georgia', sans-serif;
+$font-quaternary: 'Permanent Marker', cursive;
+$body-font-size: 13;
+$root-font-size: 10;
+$body-line-height: 22;
+$em-base: 13;
+
+// Weights
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+
+// =============================================================================
+// COLORS
+// =============================================================================
+$color-skin-default: #CCC;
+
+$color-font-default: #707070;
+$color-font-default-2: #777;
+
+$color-light: #FFF;
+$color-light-inverse: #1c1f21;
+
+$color-dark: #1c1f21;
+$color-dark-inverse: #FFF;
+
+// Color light scales
+$color-light-base-color: #f1f3f7;
+
+$color-light-1: lighten($color-light-base-color, 3.5%);
+$color-light-2: lighten($color-light-base-color, 3%);
+$color-light-3: lighten($color-light-base-color, 2%);
+$color-light-4: lighten($color-light-base-color, 1%);
+$color-light-5: $color-light-base-color;
+
+// Color dark scales
+$color-dark-base-color: #2E3237;
+
+$color-dark-1: darken($color-dark-base-color, 16%);
+$color-dark-2: darken($color-dark-base-color, 8%);
+$color-dark-3: darken($color-dark-base-color, 6%);
+$color-dark-4: darken($color-dark-base-color, 2%);
+$color-dark-5: $color-dark-base-color;
+
+// Color light and dark scale list
+$color-scales: (1 $color-light-1 $color-dark-1) (2 $color-light-2 $color-dark-2) (3 $color-light-3 $color-dark-3) (4 $color-light-4 $color-dark-4) (5 $color-light-5 $color-dark-5);
+
+// Light version
+$light-bg: #FFF;
+
+// Border Colors
+$border-color-default: #EDEDEE;
+
+// =============================================================================
+// SETTINGS
+// =============================================================================
+$border-radius: 5px;
+
+// =============================================================================
+// MEDIA QUERIES BREAKPOINTS
+// =============================================================================
+$screen-xs: 0;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;

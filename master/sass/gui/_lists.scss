@@ -1,0 +1,167 @@
+/* List */
+.list {
+	li {
+		> a + .list {
+			padding-left: 2.8rem;
+		}
+		> span {
+			display: inline-flex;
+		    margin-#{$right}: 0.2rem;
+		}
+	}
+}
+
+@include if-rtl() {
+	.list-unstyled {
+		padding-right: 0;
+	}
+}
+
+.list:not(.list-unstyled) {
+
+	li:not(.list-group-item) {
+		margin-bottom: 0.25em;
+	}
+
+	ul {
+		margin-top: 0.25em;	
+		margin-bottom: 0.5em;	
+	}
+
+	&.list-style-1 {
+		list-style: outside none none;
+		padding-left: 0;
+
+		li {
+			margin-bottom: 0.5rem;
+			padding-left: 22px;
+			position: relative;
+			&:before {
+				content: ' ';
+				display: block;
+				width: 12px;
+				height: 1px;
+				border-bottom: 1px solid $color-font-default;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				margin-top: 1px;
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	&.list-light {
+		li {
+			color: #e2e2e2;
+			&:before {
+				border-color: #e2e2e2;
+			}
+		}
+	}
+
+}
+
+/* List Icon */
+.list-icon {
+	li {
+	    position: relative;
+		padding-#{$left}: 1.3rem;
+		> i {
+			position: absolute;
+			#{$left}: 0;
+		    top: 7px;
+		}
+	}
+}
+
+/* List Icons Size */
+.list {
+	
+	&.list-icons-size-1 {
+		li {
+			> i {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	&.list-icons-size-2 {
+		li {
+			> i {
+				font-size: 1.25rem;
+			}
+		}
+	}
+
+	&.list-icons-size-3 {
+		li {
+			> i {
+				font-size: 1.50rem;
+			}
+		}
+	}
+
+	&.list-icons-size-4 {
+		li {
+			> i {
+				font-size: 1.75rem;
+			}
+		}
+	}
+
+	&.list-icons-size-5 {
+		li {
+			> i {
+				font-size: 2rem;
+			}
+		}
+	}
+
+}
+
+/* List Borders */
+.list {
+
+	&.list-borders {
+		li {
+			border-bottom: 1px solid #DBDBDB;
+			margin-top: 9px;
+			margin-bottom: 0;
+			padding-bottom: 9px;
+		}
+	}
+
+	&.list-borders {
+		li:last-child {
+			border-bottom: 0;
+		}
+	}
+
+}
+
+/* List Filter */
+.list {
+
+	&.list-filter {
+		li {
+			margin-bottom: 10px !important;
+			a {
+				border: 1px solid #dadada;
+			    padding: 0.3rem 0.4rem;
+			    min-width: 40px;
+			    display: inline-block;
+			    text-align: center;
+			    &:hover {
+			    	border-color: $color-skin-default;
+			    }
+			    &.active {
+			    	color: $color-light !important;
+			    	background-color: $color-skin-default;
+			    	border-color: $color-skin-default;
+			    }
+			}
+		}
+	}
+
+}

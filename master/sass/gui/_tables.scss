@@ -1,0 +1,15 @@
+/* Tables */
+.table-active {
+	color: #fff;
+	> {
+		td, th {
+			color: #fff;
+		}
+	}
+}
+
+/* Table Dark */
+.table-dark>td, 
+.table-dark>th {
+	background: transparent;
+}

@@ -1,0 +1,58 @@
+html {
+	direction: $dir;
+	box-shadow: none !important;
+	font-size: 100%;
+	margin: 0 !important;
+}
+
+body {
+	background-color: $light-bg;
+	color: $color-font-default;
+	font-family: $font-secondary;
+	font-size: $body-font-size + 0px;
+	line-height: $body-line-height + 0px;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	text-align: $left;
+
+	a {
+		outline: none !important;
+	}
+
+}
+
+strong {
+	line-height: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-primary;
+}
+
+li {
+	line-height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+	html.safari {
+		position: relative;
+		overflow-x: hidden;
+	}
+
+}
+
+@media (max-width: 479px) {
+
+	body {
+		font-size: 13px;
+	}
+
+}
+
+.body {
+	background-color: $color-light;
+}

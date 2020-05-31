@@ -1,0 +1,58 @@
+/* Paragraphs */
+p {
+	color: $color-font-default;
+	line-height: 1.9;
+	margin: 0 0 1.2em;
+	&.featured {
+		font-size: 1.6em;
+		line-height: 1.5em;
+	}
+	&.short {
+		margin-bottom: 0;
+	}
+	&.tall {
+		margin-bottom: 20px;
+	}
+	&.taller {
+		margin-bottom: 40px;
+	}
+}
+
+/* Links */
+a {
+	color: $color-font-default;
+	transition: ease color 300ms;
+	&:hover, 
+	&:focus {
+		color: $color-skin-default;
+		text-decoration: none;
+	}
+
+	&.link {
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}
+
+/* Drop Caps */
+p.drop-caps {
+	&:first-letter {
+		float: $left;
+		font-size: 75px;
+		line-height: 60px;
+		padding: 4px;
+		margin-#{$right}: 5px;
+		margin-top: 5px;
+		font-family: Georgia;
+	}
+
+	&.drop-caps-style-2:first-letter {
+		background-color: #CCC;
+		color: #FFF;
+		padding: 6px;
+		margin-#{$right}: 5px;
+		border-radius: 4px;
+	}
+}

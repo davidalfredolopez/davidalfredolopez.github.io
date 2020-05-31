@@ -1,0 +1,71 @@
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	color: $color-dark;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0 0 0.4rem 0;
+	letter-spacing: -0.5px;
+}
+
+h1 {
+	font-size: 2.3rem;
+}
+
+h2 {
+	font-size: 1.8rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.1rem;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+h6 {
+	font-size: 0.8rem;
+}
+
+/* Heading with Icons */
+h1, h2, h3, h4, h5, h6 {
+	> i, .fa, .fas, .far, .fal, .fab, svg, object {
+		margin-right: 10px;
+		font-size: 1.9em;
+	}
+
+	&.icon-va-fix-1 {
+		> i, .fa, .fas, .far, .fal, .fab, svg, object {
+			position: relative;
+			top: -1px;	
+		}
+	}
+	&.icon-va-fix-2 {
+		> i, .fa, .fas, .far, .fal, .fab, svg, object {
+			position: relative;
+			top: -2px;	
+		}
+	}
+	&.icon-va-fix-3 {
+		> i, .fa, .fas, .far, .fal, .fab, svg, object {
+			position: relative;
+			top: -3px;	
+		}
+	}
+}
+
+/* Styled Heading */
+.heading-style-1 {
+	font-size: 6.3rem; 
+	line-height: 1; 
+	letter-spacing: -5px;
+	> span {
+		position: absolute;
+	    margin-left: -0.9rem;
+	    z-index: -1;
+	}
+}

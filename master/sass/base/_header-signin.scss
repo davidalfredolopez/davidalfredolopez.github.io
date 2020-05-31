@@ -1,0 +1,112 @@
+/* Header Signin / Signup / Logged */
+#header .header-nav-main nav > ul > li.dropdown-mega.dropdown-mega-signin {
+	&.open,
+	&:hover {
+		> .dropdown-menu {
+			pointer-events: auto;
+		}
+	}
+	> a {
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			height: 20px;
+			border-left: 1px solid #CCC;
+			transform: translate3d(0, -50%, 0);
+		}
+	}
+	> .dropdown-menu {
+	    max-width: 350px;
+	    width: 100vw !important;
+	    top: 100%;
+	    right: 0 !important;
+	    left: auto;
+	    pointer-events: none;
+	    background: $color-light;
+	    &:before {
+		    content: '';
+		    display: block;
+		    position: absolute;
+		    top: -10px;
+		    right: 30px;
+		    width: 0;
+		    height: 0;
+		    border-left: 10px solid transparent;
+		    border-right: 10px solid transparent;
+		    border-bottom: 10px solid $color-light;
+		}
+		li {
+			&:hover {
+				> a {
+					color: $color-skin-default;
+					transform: translate3d(0, 0, 0);
+				}
+			}
+		}
+	}
+
+	.dropdown-mega-content {
+		> .row {
+			> div {
+				padding: 5px 25px;
+				border: none !important;
+			}
+		}
+	}
+
+	.forgot-pw {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&.signin {
+		.signup-form,
+		.recover-form {
+			display: none;
+		}
+	}
+
+	&.signup {
+		.signin-form,
+		.recover-form {
+			display: none;
+		}
+	}
+
+	&.recover {
+		.signin-form,
+		.signup-form {
+			display: none;
+		}
+	}
+}
+
+@media(max-width: 991px) {
+	#header .header-nav-main nav > ul > li.dropdown-mega.dropdown-mega-signin {
+		> a {
+			font-weight: bold;
+			&:before {
+				content: none;
+			}
+		}
+		> .dropdown-menu {
+			display: block;
+		    max-width: 100%;
+		    padding: 0.6rem;
+		    &:before {
+		    	content: none;
+		    }
+		}
+
+		&.logged {
+			li {
+				border-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,151 @@
+/* Particles */
+@keyframes expandParticles {
+	from {
+		transform: scale(0.2);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+.expandParticles {
+	animation-name: expandParticles;
+}
+
+/* Particles */
+.particles {
+	position: relative;
+	min-height: 380px;
+	@include if-rtl() {
+		transform: rotateY(180deg);
+	}
+	
+	/* Rect */
+	.particles-rect {
+		position: absolute;
+	    right: 3%;
+	    width: 45%;
+	    min-width: 150px;
+	    height: 83%;
+	}
+
+	/* Particles SVG */
+	.svg-particles {
+	    position: absolute;
+	    top: 50%;
+	    @include if-ltr() { left: 47%; }
+	    @include if-rtl() { left: 64%; }
+	    width: 114%;
+	    transform: translate(-50%, -50%);
+		.g-particles {
+			transform-origin: center;
+		}
+	}
+
+	/* Counter Style */
+	.particles-counter {
+		position: relative;
+		width: 100%;
+	    box-shadow: 0px 4px 50px -19px rgba($color-dark, 0.4);
+	    .counters {
+	    	padding: 1.8rem;
+	    	[class*="col-"] {
+	    		border-color: rgba($color-dark-5, 0.1);
+	    		border-style: solid;
+	    		border-width: 0;
+
+	    		&:nth-child(1) {
+	    			border-right-width: 1px;
+	    			border-bottom-width: 1px;
+	    		}
+	    		&:nth-child(2) {
+	    			border-bottom-width: 1px;
+	    		}
+	    		&:nth-child(3) {
+	    			border-right-width: 1px;
+	    		}
+
+	    	}
+	    }
+	}
+}
+
+/* IE */
+html.ie {
+	.particles {
+		.img-fluid {
+			flex-shrink: 0;
+		}
+	}
+}
+
+/* Particles Responsive */
+@media (max-width: 1199px) {
+	.particles {
+		.particles-rect {
+			right: -6%;
+		}
+		.svg-particles {
+			width: 134%;
+		}	
+	}
+}
+
+@media (max-width: 991px) {
+	.particles {
+		min-height: 318px;
+		> img {
+			max-height: 181px;
+		}
+		.particles-rect {
+			height: 70%;
+		}
+		.svg-particles {
+			width: 114%;
+		}	
+		.particles-counter {
+		    .counters {
+		    	padding: 1rem;
+		    }
+		}	
+	}
+}
+
+@media (max-width: 767px) {
+	.particles {
+		min-height: 50vw;
+	    margin: 6vw 0 0;
+		> img {
+			height: auto;
+			max-height: none;
+		}	
+		.svg-particles {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.particles {
+		.particles-counter {
+		    .counters {
+		    	padding: 1.8rem;
+		    	[class*="col-"] {
+
+		    		&:nth-child(1) {
+		    			border-right-width: 0;
+		    			border-bottom-width: 1px;
+		    		}
+		    		&:nth-child(2) {
+		    			border-bottom-width: 1px;
+		    		}
+		    		&:nth-child(3) {
+		    			border-right-width: 0;
+		    			border-bottom-width: 1px;
+		    		}
+
+		    	}
+		    }
+		}
+	}
+}

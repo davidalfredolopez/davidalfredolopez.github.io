@@ -1,0 +1,46 @@
+html.gap-outside {
+	.body {
+		margin-top: 1.6rem;
+		margin-bottom: 1.6rem;
+	}
+
+	.main,
+	#footer {
+		margin-right: 1.6rem;
+		margin-left: 1.6rem;
+	}
+
+	// Rev Slider
+	.slider-container {
+		width: 100% !important;
+		left: auto !important;
+	}
+
+	// Header
+	#header {
+		margin-top: -1.6rem;
+		.header-body {
+			left: 0;
+			padding-right: 1.6rem;
+			padding-left: 1.6rem;
+		}
+
+		// Container
+		.header-container {
+			&:after {
+				content: none;
+			}
+		}
+	}
+
+	@media (max-width: 991px) {
+		#header {
+			.header-nav-main {
+				&:before {
+					width: calc(100vw - 3.2rem);
+				}
+			}
+		}
+	}
+}
+

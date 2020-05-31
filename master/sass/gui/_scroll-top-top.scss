@@ -1,0 +1,53 @@
+/* Scroll to Top */
+html {
+	.scroll-to-top {
+		transition: opacity 0.3s;
+		background: #404040;
+		border-radius: 100%;
+		bottom: 10px;
+		color: #FFF;
+		display: block;
+		height: 35px;
+		opacity: 0;
+		padding: 5px;
+		position: fixed;
+		text-align: center;
+		text-decoration: none;
+		width: 35px;
+		z-index: 1040;
+		font-size: 10px;
+		#{$right}: 10px;
+		&:hover {
+			opacity: 1;
+		}
+		&.visible {
+			opacity: 0.75;
+		}
+		i {
+			position: relative;
+			top: 1px;
+		}
+	}
+
+	&.lightbox-open {
+		.scroll-to-top {
+			#{$right}: 27px;
+		}
+	}
+
+	&.ie11 {
+		.scroll-to-top {
+			#{$right}: 25px;
+		}
+	}
+
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+	html .scroll-to-top.hidden-mobile {
+		display: none !important;
+	}	
+
+}

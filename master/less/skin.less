@@ -1,0 +1,1439 @@
+@import "for";
+@import "mixins";
+
+// Basic
+a:not(.no-skin):not(.btn):not(.badge):not(.nav-link) {
+	&:hover, 
+	&:focus {
+		color: @color-primary;
+		&.link-underline {
+			border-color: @color-primary;
+		}
+	}
+}
+
+// Font Colors
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+
+		.text-color-@{name}:not(.no-skin),
+		.text-@{name}:not(.no-skin) {
+			color: @color !important;
+		}
+	}
+}
+
+// Border Colors
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+
+		.border-color-@{name}:not(.no-skin) {
+			border-color: @color !important;
+		}
+	}
+}
+
+// Background Colors
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+
+		.bg-@{name}-1:not(.no-skin) {
+			background-color: darken(@color, 40%) !important;
+		}
+
+		.bg-@{name}-2:not(.no-skin) {
+			background-color: darken(@color, 30%) !important;
+		}
+
+		.bg-@{name}-3:not(.no-skin) {
+			background-color: darken(@color, 20%) !important;
+		}
+
+		.bg-@{name}-4:not(.no-skin) {
+			background-color: darken(@color, 10%) !important;
+		}
+
+		.bg-@{name}:not(.no-skin) {
+			background-color: @color !important;
+		}
+
+		.bg-@{name}-6:not(.no-skin) {
+			background-color: lighten(@color, 10%) !important;
+		}
+
+		.bg-@{name}-7:not(.no-skin) {
+			background-color: lighten(@color, 20%) !important;
+		}
+
+		.bg-@{name}-8:not(.no-skin) {
+			background-color: lighten(@color, 30%) !important;
+		}
+
+		.bg-@{name}-9:not(.no-skin) {
+			background-color: lighten(@color, 40%) !important;
+		}
+	}
+}
+
+// Overlay Colors
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+
+		.overlay-color-@{name}:not(.no-skin) {
+			&:before {
+				background-color: @color !important;
+			}
+		}
+	}
+}
+
+// Buttons
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+		@color-inverse:  extract(@value, 3);
+
+		.btn-@{name},
+		&.sticky-header-active .btn-sticky-@{name} {
+			border-color: @color;
+			color: @color-inverse;
+			background-color: @color;
+			&:hover, &:focus {
+				border-color: lighten(@color, 10%);
+				background-color: lighten(@color, 10%);
+				color: @color-inverse;
+			}
+			&:focus {
+				box-shadow: 0 0 0 3px fade(@color, 25%);
+			}
+			&:disabled, &.disabled {
+				&,
+				&:hover,
+				&:active,
+				&:focus {
+					cursor: default;
+					border-color: @color !important;
+					color: @color-inverse !important;
+					background-color: @color !important;
+				}
+			}
+			&:not([disabled]):not(.disabled).active, 
+			&:not([disabled]):not(.disabled):active {
+				border-color: @color;
+				color: @color-inverse;
+				background-color: @color;
+			    box-shadow: 0 0 0 0.2rem lighten(@color, 10%);
+			} 
+		}
+	}
+}
+
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+		@color-inverse:  extract(@value, 3);
+
+		.btn-outline.btn-@{name},
+		&.sticky-header-active .btn-outline.btn-sticky-@{name} {
+			background: transparent;
+			border-color: @color;
+			color: @color;
+			&:hover, &:focus {
+				border-color: lighten(@color, 10%);
+				background-color: @color !important;
+				color: @color-inverse;
+			}
+			&:focus {
+				box-shadow: 0 0 0 3px fade(@color, 25%);
+			}
+			&:disabled, &.disabled {
+				&,
+				&:hover,
+				&:active,
+				&:focus {
+					background: transparent !important;
+					border-color: @color !important;
+					color: @color !important;
+				}
+			}
+		}
+	}
+}
+
+.btn-link {
+	color: @color-primary;
+	&:hover, &:focus {
+		color: lighten(@color-primary, 10%);
+	}
+	&:disabled, &.disabled {
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			color: @color-primary !important;
+		}
+	}
+}
+
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+		@color-inverse:  extract(@value, 3);
+
+		.btn-link.btn-@{name} {
+			color: @color;
+			&:hover, &:focus {
+				color: lighten(@color, 10%);
+			}
+			&:disabled, &.disabled {
+				&,
+				&:hover,
+				&:active,
+				&:focus {
+					color: @color !important;
+				}
+			}
+		}
+	}
+}
+
+// Badge Colors
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+		@color-inverse:  extract(@value, 3);
+
+		.badge-@{name}:not(.no-skin) {
+			background: @color;
+			color: @color-inverse;
+		}
+	}
+}
+
+// Lists
+.list-group-item {
+	&.active {
+		background-color: @color-primary;
+		border-color: @color-primary;
+	}
+}
+
+// List Filter
+.list {
+
+	&.list-filter {
+		li {
+			a {
+			    &:hover {
+			    	border-color: @color-primary;
+			    }
+			    &.active {
+			    	background-color: @color-primary;
+			    	border-color: @color-primary;
+			    }
+			}
+		}
+	}
+
+}
+
+// Pagination
+.pagination {
+	.page-item + .page-item {
+		&.active {
+			.page-link {
+				background: @color-primary;
+			}
+		}
+	}
+	.page-link {
+		&:hover:not(.next):not(.prev) {
+			color: @color-primary;
+			border: 1px solid @color-primary;
+		}
+	}
+}
+
+// Accordions
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+		@color-inverse:  extract(@value, 3);
+		.accordion:not(.accordion-minimal) {
+			&.accordion-@{name} {
+				.accordion-header {
+					a {
+						background-color: @color;
+						&, &:hover, &:focus {
+							color: @color-inverse;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Sections
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+		@color-inverse:  extract(@value, 3);
+
+		section.section-@{name} {
+			background-color: @color !important;
+		}
+
+		section.section-@{name}-scale-2 {
+			background-color: darken(@color, 10%) !important;
+			border-color: darken(@color, 15%) !important;
+
+			.sort-source {
+				 &.sort-source-style-2 {
+					 > li {
+						&.active {
+							> a {
+								&:after {
+									border-top-color: darken(@color, 10%);
+								}
+							}
+						}
+					 }
+				 }
+			}
+		}
+	}
+}
+
+// Steps
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+
+		.steps-@{name} {
+			.dots {
+				.dots-color {
+					background: @color;
+				}
+			}
+			.item {
+				border-color: @color;
+				.item-title {
+					span {
+						color: @color;
+					}
+				}
+			}
+
+			&.steps-style-2 {
+				.item.active {
+					.item-title {
+						color: @color;
+					}
+
+					> i {
+						color: @color;
+					}
+				}
+			}
+
+			&.steps-style-3 {
+				.item.active {
+					.item-title {
+						color: @color;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Nav
+html {
+	.nav:not(.nav-tabs) {
+		> .nav-item {
+			> .nav-link:not(.no-skin) {
+				&.active {
+					color: @color-primary;
+				}
+				&:hover,
+				&:focus,
+				&:active {
+					color: @color-primary;
+				}
+			}
+		}
+	}
+}
+
+// Nav Pills
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+		@color-inverse:  extract(@value, 3);
+
+		.nav-pills-@{name} {
+			.nav-link.active,
+			.show > .nav-link {
+				background-color: @color;
+			}
+		}
+	}
+}
+
+// Nav tabs
+html {
+	.nav-tabs {
+		.nav-item {
+			.nav-link {
+				&:after {
+					background-color: @color-primary;
+				}
+			}
+		}
+	}
+}
+
+// Header
+html {
+	#header {
+		
+		// Header Top
+		.header-top {
+			&.header-top-dark {
+				span {
+					> a:hover {
+						color: @color-primary;
+					}
+				}
+				.nav {
+					> li {
+						> a {
+							&:hover,
+							&:focus {
+								color: @color-primary;
+								> i {
+									color: @color-primary;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// Header Nav Main
+		.header-nav-main {
+			nav {
+				> ul {
+					> li {
+						> a {
+							&.active {
+								color: @color-primary;
+							}
+						}
+						&.open,
+						&:hover,
+						&:focus {
+							> a {
+								color: @color-primary;
+							}
+						}
+
+						&.dropdown-mega {
+							&.dropdown-mega-signin {
+								> .dropdown-menu {
+									li {
+										&:hover {
+											> a {
+												color: @color-primary;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// Header Nav
+		@media(min-width: 992px) {
+			.header-nav {
+				&.header-nav-top-line {
+					.header-nav-main {
+						nav {
+							> ul {
+								> li {
+									> a {
+										&.active {
+											&:before {
+												border-color: @color-primary;
+											}
+										}
+									}
+									&:hover,
+									&:focus {
+										> a {
+											color: @color-primary;
+											&:before {
+												border-color: @color-primary;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&.header-nav-stripe {
+					.header-nav-main {
+						nav {
+							> ul {
+								> li {
+									
+									> a {
+										&.active {
+											background: darken(@color-primary, 6%);
+											color: @color-primary-inverse;
+										}
+									}
+									&:hover,
+									&:focus {
+										> a {
+											background: @color-primary;
+											color: @color-primary-inverse;
+										}
+									}
+
+									> .dropdown-menu {
+										&:before {
+											border-color: @color-primary;
+										}
+									}
+
+									&.dropdown-full-color {
+										> a {
+											&.active {
+												color: @color-primary-inverse !important;
+											}
+										}
+										&:hover,
+										&:focus {
+											> a {
+												color: @color-primary-inverse !important;
+											}
+										}
+									}
+
+									// Stripe Colors
+									.for(@colors-list); .-each(@value) {
+										@name:  extract(@value, 1);
+										@color:  extract(@value, 2);
+										@color-inverse:  extract(@value, 3);
+										&.dropdown-@{name} {
+											> a {
+												&.active {
+													background: darken(@color, 6%);
+													color: @color-inverse;
+												}
+											}
+											&:hover,
+											&:focus {
+												> a {
+													background: @color;
+													color: @color-inverse;
+												}
+											}
+
+											> .dropdown-menu {
+												&:before {
+													border-color: @color;
+												}
+											}
+
+											&.dropdown-full-color {
+												> a {
+													&.active {
+														color: @color-inverse !important;
+													}
+												}
+												&:hover,
+												&:focus {
+													> a {
+														color: @color-inverse !important;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&.header-nav-line-under-text {
+					.header-nav-main {
+						nav {
+							> ul {
+								> li {
+									> a {
+										&:before {
+											border-color: fade(@color-primary, 50%);
+										}
+									}
+									> a {
+										&:hover,
+										&:focus,
+										&.active {
+											&:before {
+												border-color: fade(@color-primary, 50%);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&.header-nav-light-dropdown {
+					.header-nav-main {
+						nav {
+							> ul {
+								> li {
+									&.dropdown {
+										.dropdown-menu {
+											li {
+												&:hover,
+												&:focus {
+													> a {
+														color: @color-primary;
+													}
+												}
+											}
+										}
+									}
+									
+									&.dropdown-mega {
+										&.dropdown-mega-style-2 {
+											.dropdown-mega-sub-content-block {
+												&:before {
+													background-color: @color-primary;
+												}
+											}
+										}
+									}
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@media(max-width: 991px) {
+			.header-nav {
+				&.header-nav-light-dropdown {
+					.header-nav-main {
+						nav {
+							> ul {
+								li {
+									a {
+										&:hover,
+										&:focus,
+										&.active {
+											color: @color-primary;
+										}
+									}
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// Colors
+		.header-nav-main {
+			nav {
+				> ul {
+					> li {
+						&.dropdown {
+							&.dropdown-full-color {
+
+								.for(@colors-list); .-each(@value) {
+									@name:  extract(@value, 1);
+									@color:  extract(@value, 2);
+									@color-inverse:  extract(@value, 3);
+									&.dropdown-@{name} {
+										@media(min-width: 992px) {
+											> a {
+												color: @color;
+											}
+											.dropdown-menu {
+												background-color: @color;
+												li {
+													> a {
+														color: fade(@color-inverse, 70%);
+													}
+													&:hover,
+													&:focus {
+														> a {
+															color: @color-inverse !important;
+														}
+													}
+													&.dropdown-submenu {
+														.dropdown-menu {
+															background-color: @color;
+														}
+													}
+												}
+											}
+
+											&.dropdown-mega {
+												.dropdown-mega-content {
+													> .row {
+														> div {
+															border-color: fade(@color-inverse, 20%);
+														}
+													}
+												}
+												.dropdown-mega-sub-title {
+													color: @color-inverse;
+												}
+												
+												&.dropdown-mega-style-2 {
+													.dropdown-mega-sub-content-block {
+														&:before {
+															background-color: fade(@color-inverse, 10%);
+														}
+
+														.content-block-button {
+															color: @color-inverse !important;
+														}
+													}
+												}
+											}
+										}
+
+										@media(max-width: 991px) {
+											border-color: fade(@color-inverse, 20%);
+
+											> a {
+												color: @color-inverse;
+											}
+											> .dropdown-menu {
+												background-color: @color;
+											}
+											.dropdown-menu {
+												li {
+													> a {
+														color: fade(@color-inverse, 70%);
+														&:hover,
+														&:focus {
+															color: @color-inverse !important;
+														}
+													}
+												}
+											}
+
+											&.opened {
+												background-color: @color;
+											}
+
+											&.dropdown-mega {
+												.dropdown-mega-sub-title {
+													color: @color-inverse;
+												}
+											}
+										}
+									}
+								}
+
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+}
+
+// Side Header
+@media(min-width: 992px) {
+	html {
+		&.side-header:not(.side-header-semi-transparent) {
+
+			#header {
+				.header-nav-main {
+					nav {
+						> ul {
+							> li {
+								&.dropdown {
+									.dropdown-menu {
+										li {
+											a:not(.btn) {
+												&:focus,
+												&:hover {
+													color: @color-primary;
+												}
+											}
+											&:hover,
+											&:focus {
+												> a {
+													color: @color-primary;
+												}
+											}
+										}
+									}
+								}
+
+								&.dropdown-mega {
+									.dropdown-mega-sub-nav {
+										li {
+											&:focus,
+											&:hover {
+												> a {
+													color: @color-primary;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
+
+// When sticky is not active
+html:not(.sticky-header-active) {	
+	#header {
+
+		// Header Transparent
+		&.header-transparent,
+		&.header-semi-transparent,
+		&.header-semi-transparent-light {
+			@media(min-width: 992px) {
+				.header-nav-main {
+					nav {
+						> ul {
+							> li:not(.active):hover {
+								> a {
+									color: @color-primary;
+								}
+							}
+						}
+					}
+
+					&.header-nav-main-dark {
+						nav {
+							> ul {
+								> li:not(.active):hover {
+									> a {
+										color: @color-primary;
+									}
+								}
+							}
+						}						
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+// Side Header Button Toggle
+.side-header-btn-toggle {
+	&:hover {
+		color: @color-primary;
+	}
+}
+
+// Page Header
+html {
+	.page-header {
+		.for(@colors-list); .-each(@value) {
+			@name:  extract(@value, 1);
+			@color:  extract(@value, 2);
+			@color-inverse:  extract(@value, 3);
+
+			&.page-header-@{name} {
+				background-color: @color;
+				h1, a, span, li, p {
+					color: @color-inverse !important;
+				}
+			}
+		}
+	}
+}
+
+// Slider
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+		@color-inverse:  extract(@value, 3);
+
+		// Overlay
+		.slide-overlay-@{name} {
+			.slotholder:after {
+				background-color: @color !important;
+			}
+		}
+	}
+
+	// Bullets
+	.tp-bullet {
+		&.selected,
+		&:hover {
+			background: @color-primary;
+		}
+	}
+
+	// Slider Scroll Button
+	.slider-scroll-button {
+		background-color: @color-primary;
+	}
+}
+
+// Carousel
+html {
+
+	.owl-carousel {
+		&:not(.mirrored) {
+			.owl-nav {
+	            .owl-prev, 
+	            .owl-next {
+	                color: @color-primary;
+	            }
+	        }
+	        .owl-dots {
+	            .owl-dot {
+	                &.active {
+	                    span {
+	                        background: @color-primary !important;
+	                    }
+	                }
+	            }
+	        }
+	    }
+
+	    &.carousel-center-active-items:not(.carousel-center-active-items-style-2):not(.carousel-center-active-items-style-3) {
+	    	.owl-item {
+	    		&.active.current {
+	    			.card,
+	    			.testimonial-arrow {
+	    				background: @color-primary !important;
+	    			}
+	    		}
+	    	}
+	    }
+
+	    &.rounded-style-1 {
+	    	.owl-stage-outer {
+	    		&:before {
+	    			border-color: @color-primary;
+	    		}
+	    	}
+	    }
+
+	    &.nav-style-5 {
+	    	.owl-nav {
+				.owl-prev, 
+				.owl-next {
+					background: @color-primary;
+					color: #FFF !important;
+				}
+			}
+	    }
+	}
+
+}
+
+// Double Carousel
+html {
+	.double-carousel {
+		// Double Carousel Default
+		.owl-carousel {
+			.owl-nav {
+	            .owl-prev, 
+	            .owl-next {
+	                color: @color-primary;
+	            }
+	        }
+		}
+
+        // Double Carousel Style 1
+        .nav {
+            .arrows {
+                .arrow-left,
+                .arrow-right {
+                    color: @color-primary !important;
+                }
+            }
+        }
+
+        .owl-carousel {
+            .owl-dots {
+                .owl-dot {
+                    &.active {
+                        span {
+                            background: @color-primary !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Double Carousel Style 2
+        &.double-carousel-style-2 {
+        	.owl-carousel {
+	            .owl-item {
+	                &.active.current {
+	                	.card {
+	                		background: @color-primary;
+	                	}
+	                }
+	            }
+	        }
+        }
+    }
+}
+
+// Blockquote
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+		@color-inverse:  extract(@value, 3);
+
+		// Overlay
+		.blockquote {
+
+			&.blockquote-style-1 {
+
+				&.blockquote-@{name} {
+					&:before {
+						color: @color !important;
+					}
+				}
+
+			}
+
+			&.blockquote-style-2 {
+
+				&.blockquote-@{name} {
+					border-left-color: @color !important;
+				}
+
+			}
+
+		}
+	}
+}
+
+// Slider Range
+.slider-range-wrapper {
+	.slider-range {
+		.noUi-connect {
+			background-color: @color-primary;
+		}
+		.noUi-handle {
+			background-color: @color-primary;
+		}
+	}
+}
+
+// Drop Caps
+.drop-caps {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+		@color-inverse:  extract(@value, 3);
+
+		&.drop-caps-@{name} {
+			&:first-letter {
+				color: @color;
+			}
+
+			&.drop-caps-style-2:first-letter {
+				background-color: @color;
+				color: @color-inverse;
+			}
+		}
+	}
+}
+
+// Tables
+.table-active {
+	background-color: @color-primary !important;
+	& > {
+		td, th {
+			background-color: @color-primary !important;
+		}
+	}
+}
+
+// Progress Bar
+html {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+
+		.progress-bar-bg-@{name}:not(.no-skin) {
+			background-color: @color !important;
+			&:after {
+				border-color: @color !important;
+			}
+		}
+	}
+}
+
+// Word Rotator
+.word-rotator.type {
+	
+	.word-rotator-words {
+		&.selected {
+			background-color: @color-primary;
+		}
+	}
+
+}
+
+.word-rotator.loading-bar {
+
+	.word-rotator-words {
+		&::after {
+			background: @color-primary;
+		}
+	}
+
+}
+
+.word-rotator.clip {
+
+	.word-rotator-words {
+		&::after {
+			background-color: @color-primary;
+		}
+	}
+}
+
+// Scrollable Element
+.scrollable-element {
+	&::-webkit-scrollbar-thumb {
+		background-color: @color-primary;
+	}
+}
+
+// Social Icons
+.social-icons {
+	&.social-icons-pills {
+		li {
+			a {
+				background-color: @color-primary;
+			}
+		}
+	}
+
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+		@color-inverse:  extract(@value, 3);
+
+		&.social-icons-@{name}:not(.no-skin) {
+			li {
+				a {
+					background-color: @color-primary;
+					color: @color-inverse !important;
+				}
+			}
+		}
+
+		&.social-icons-icon-@{name}:not(.no-skin) {
+			li {
+				a {
+					color: @color-primary !important;
+				}
+				&:hover {
+					a {
+						color: @color-inverse !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Icon Boxes
+.icon-box-animation-1:not(.icon-box-animation-1-light) {
+	&:before,
+	&:after {
+		border-color: @color-primary;
+	}
+	.icon-box {
+		&:before,
+		&:after {
+			border-color: @color-primary;
+		}
+	}
+}
+
+// Timeline
+.timeline {
+	.timeline-box {
+		&.left {
+			&:before {
+			    background: @color-primary;
+			}
+		}
+		&.right {
+			&:before {
+				background: @color-primary;
+			}
+		}
+	}
+}
+
+// Skew Text Bar
+.skew-text-bar-1 {
+	&:before {
+	    background: @color-primary;
+	}
+}
+
+// Footer
+html {
+	#footer {
+
+		.for(@colors-list); .-each(@value) {
+			@name:  extract(@value, 1);
+			@color:  extract(@value, 2);
+			@color-inverse:  extract(@value, 3);
+
+			&.footer-@{name} {
+				background-color: @color;
+				p, span, a, li {
+					color: @color-inverse;
+				}
+			}
+		}
+
+	}
+}
+
+// Border Radius
+& when (@border-radius = 0) {
+
+	// Bootstrap
+	.rounded,
+	.img-thumbnail,
+	.img-thumbnail img,
+	code,
+	pre,
+	.form-control,
+	.invalid-tooltip,
+	.btn,
+	.dropdown-menu,
+	.input-group-addon,
+	.input-group.input-group-style-1 .input-group-btn:not(:first-child) .btn,
+	.nav-tabs > li > a,
+	.nav-tabs.nav-justified > li > a,
+	.nav-pills > li > a,
+	.nav-tabs-justified > li > a,
+	.navbar,
+	.navbar-toggle,
+	.navbar-toggle .icon-bar,
+	.nav-secondary.nav-secondary-style-2 .nav > li > a > span,
+	.breadcrumb,
+	.pagination,
+	.pager li > a,
+	.pager li > span,
+	.label,
+	.badge,
+	.container .jumbotron,
+	.container-fluid .jumbotron,
+	.thumbnail,
+	.alert,
+	.progress,
+	.card,
+	.accordion .card,
+	.accordion .accordion-header a,
+	.well,
+	.well-lg,
+	.well-sm,
+	.modal-content,
+	.tooltip-inner,
+	.popover,
+	.popover-title,
+	.carousel-indicators li,
+	.pagination > li:first-child > a,
+	.pagination > li:first-child > span,
+	.pagination-lg > li:first-child > a,
+	.pagination-lg > li:first-child > span,
+	.pagination > li:last-child > a,
+	.pagination > li:last-child > span,
+	.pagination-lg > li:last-child > a,
+	.pagination-lg > li:last-child > span,
+	#header .header-search .form-control,
+	html #header.header-floating .header-body,
+	#header .header-nav-main nav > ul > li > a,
+	#header .header-nav-main nav > ul > li.dropdown .dropdown-menu,
+	#header .header-nav-main nav > ul > li.dropdown .dropdown-menu li.dropdown-submenu > .dropdown-menu,
+	#header .header-nav-main nav > ul > li.dropdown-mega > .dropdown-menu,
+	#header .header-nav-main nav > ul > li.dropdown-mega .dropdown-mega-sub-nav > li > a,
+	#header.header-transparent .header-nav-main,
+	#header.header-semi-transparent .header-nav-main,
+	#header.header-semi-transparent-light .header-nav-main,
+	#header .header-nav-main nav > ul > li.dropdown-mega.dropdown-mega-signin .dropdown-menu,
+	#header .header-nav-main nav > ul > li.dropdown.open > a,
+	#header .header-nav-main nav > ul > li.dropdown:hover > a,
+	#header .header-nav-top .dropdown-menu,
+	.slider-container .tparrows,
+	html.dark #header,
+	html.boxed .body,
+	blockquote.with-borders,
+	p.drop-caps.drop-caps-style-2:first-child:first-letter,
+	select,
+	.featured-icon,
+	.accordion .card-header,
+	.tabs,
+	.nav-tabs li a,
+	.tab-content,
+	.tabs.tabs-bottom .tab-content,
+	.tabs.tabs-bottom .nav-tabs li a,
+	.tabs-left .tab-content,
+	.tabs-left .nav-tabs > li:first-child a,
+	.tabs-left .nav-tabs > li:last-child a,
+	.tabs-right .tab-content,
+	.tabs-right .nav-tabs > li:first-child a,
+	.tabs-right .nav-tabs > li:last-child a,
+	.nav-tabs.nav-justified li:first-child a,
+	.nav-tabs.nav-justified li:first-child a:hover,
+	.nav-tabs.nav-justified li:last-child a,
+	.nav-pills .nav-link,
+	.nav-tabs.nav-justified li:last-child a:hover,
+	.tabs.tabs-bottom .nav.nav-tabs.nav-justified li:first-child a,
+	.tabs.tabs-bottom .nav.nav-tabs.nav-justified li:last-child a,
+	.tabs-navigation,
+	.tabs-navigation .nav-tabs > li:first-child a,
+	.tabs-navigation .nav-tabs > li:last-child a,
+	.nav-pills .nav-link,
+	.navbar-toggler,
+	.card,
+	.card-header:first-child,
+	.card-footer:last-child,
+	.card-img,
+	.card-img-top,
+	.card.card-style-5:before,
+	.badge,
+	.badge-pill,
+	.jumbotron,
+	.alert,
+	.progress,
+	.modal-content,
+	.tooltip-inner,
+	.popover,
+	.rounded,
+	.toggle > label,
+	.toggle.toggle-simple .toggle > label,
+	.toggle.toggle-simple .toggle > label:after,
+	.owl-carousel .owl-nav button[class*="owl-"],
+	.owl-carousel.rounded-nav .owl-nav button[class*="owl-"],
+	.owl-carousel.rounded-nav .owl-nav button[class*="owl-"]:hover,
+	.owl-carousel.full-width .owl-nav button.owl-prev,
+	.owl-carousel.big-nav .owl-nav button.owl-prev,
+	.owl-carousel.full-width .owl-nav button.owl-next,
+	.owl-carousel.big-nav .owl-nav button.owl-next,
+	.embed-responsive.embed-responsive-borders,
+	.pricing-table h3,
+	.pricing-table .plan,
+	.featured-box,
+	.featured-box .box-content,
+	section.timeline .timeline-date,
+	section.timeline .timeline-box,
+	.testimonial blockquote,
+	.testimonial.testimonial-style-1 blockquote,
+	.testimonial.testimonial-style-2 blockquote,
+	.testimonial.testimonial-style-3 blockquote,
+	.container .call-to-action,
+	.progress,
+	.progress.progress-border-radius,
+	.progress.progress-border-radius .progress-bar,
+	.progress-bar,
+	.progress-bar-tooltip,
+	.progress-bar-wrapper.progress-bar-style-1 .progress-bar:after,
+	.progress-bar-wrapper.progress-bar-style-2 .progress-bar:before,
+	.counters.with-borders .counter,
+	html .scroll-to-top,
+	.google-map.small,
+	.google-map-borders,
+	article.post .post-date .month,
+	article.post .post-date .day,
+	article .post-video,
+	article .post-audio,
+	ul.comments .comment-block,
+	.recent-posts .date .month,
+	#header nav.mega-menu .mega-menu-shop .dropdown-menu,
+	.shop ul.products .product .add-to-cart-product,
+	.product-info,
+	.product-info img,
+	.product-info + .product-info,
+	.img-thumbnail.img-thumbnail-hover-icon:before,
+	.product-thumb-info,
+	.highlight-boxes.highlight-boxes-rounded .wrap-boxes > div {
+		border-radius: 0 !important;
+	}
+
+	@media (min-width: 992px) {
+		#header nav.mega-menu ul.nav-main li.mega-menu-item ul.sub-menu a,
+		#header nav.mega-menu ul.nav-main li.mega-menu-fullwidth ul.dropdown-menu,
+		#header.flat-menu nav.mega-menu ul.nav-main li.mega-menu-fullwidth ul.dropdown-menu,
+		#header.flat-menu nav ul.nav-main li a,
+		html.boxed #header.flat-menu .header-top {
+			border-radius: 0 !important;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.nav-tabs.nav-justified > li > a,
+		.nav-tabs-justified > li > a,
+		.navbar {
+			border-radius: 0 !important;
+		}
+	}
+
+	@media (max-width: 575px) {
+		.tabs .nav.nav-tabs.nav-justified li:first-child a,
+		.tabs .nav.nav-tabs.nav-justified li:first-child a:hover,
+		.tabs.tabs-bottom .nav.nav-tabs.nav-justified li:last-child a,
+		.tabs.tabs-bottom .nav.nav-tabs.nav-justified li:last-child a:hover {
+			border-radius: 0 !important;
+		}
+	}
+
+}
